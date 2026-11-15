@@ -121,7 +121,7 @@ main > .section, main > .stats-strip, main > .cta-band, main > .logo-strip { max
 .next-event .btn { margin-top: 0.5rem; }
 
 /* ---------- Team ---------- */
-.team { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.25rem; }
+.team { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 300px)); gap: 1.25rem; }
 .member { margin: 0; }
 .member img { aspect-ratio: 1; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--border); transition: transform 0.25s; }
 .member:hover img { transform: rotate(-2deg) scale(1.02); }
