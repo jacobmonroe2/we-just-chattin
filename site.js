@@ -12,9 +12,19 @@ if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
     if (!raf) raf = requestAnimationFrame(draw);
     el.classList.toggle('on', !(e.target && e.target.tagName === 'IFRAME'));
   }, { passive: true });
+  // When the pointer is still over repainting content (the video wall), macOS resets the hidden
+  // native cursor to the arrow. Nudging the cursor style while idle makes the browser re-hide it.
+  const blank = 'url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=") 0 0, none';
+  let flip = false, lastMove = 0, inside = false;
+  window.addEventListener('mousemove', () => { lastMove = performance.now(); inside = true; }, { passive: true });
+  setInterval(() => {
+    if (!inside || performance.now() - lastMove < 120) return;
+    flip = !flip;
+    document.documentElement.style.setProperty('cursor', flip ? blank : 'none', 'important');
+  }, 180);
   window.addEventListener('mousedown', () => el.classList.add('down'));
   window.addEventListener('mouseup', () => el.classList.remove('down'));
-  document.addEventListener('mouseleave', () => el.classList.remove('on'));
+  document.addEventListener('mouseleave', () => { el.classList.remove('on'); inside = false; });
   document.addEventListener('mouseenter', () => el.classList.add('on'));
   window.addEventListener('blur', () => el.classList.remove('on'));
 }
