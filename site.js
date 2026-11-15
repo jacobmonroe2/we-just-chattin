@@ -17,27 +17,17 @@ if (btn && nav) {
   }));
 }
 
-// Clips reel: load + play only when visible, tap for sound (one at a time)
-const clips = document.querySelectorAll('.clip video[data-src]');
-if (clips.length && 'IntersectionObserver' in window) {
+// Most-watched reel: load each TikTok embed only as it nears the viewport
+const toks = document.querySelectorAll('.tok-frame iframe[data-src]');
+if (toks.length && 'IntersectionObserver' in window) {
   const io = new IntersectionObserver(entries => {
-    entries.forEach(({ target: v, isIntersecting }) => {
-      if (isIntersecting) {
-        if (!v.src) { v.src = v.dataset.src; v.load(); }
-        v.play().catch(() => {});
-      } else {
-        v.pause();
-      }
+    entries.forEach(({ target: f, isIntersecting }) => {
+      if (isIntersecting && !f.src) { f.src = f.dataset.src; io.unobserve(f); }
     });
-  }, { root: null, rootMargin: '200px 0px', threshold: 0.25 });
-  clips.forEach(v => io.observe(v));
-
-  clips.forEach(v => v.parentElement.addEventListener('click', () => {
-    const fig = v.parentElement;
-    const wasOn = fig.classList.contains('sound');
-    clips.forEach(o => { o.muted = true; o.parentElement.classList.remove('sound'); });
-    if (!wasOn) { v.muted = false; fig.classList.add('sound'); v.currentTime = 0; v.play().catch(() => {}); }
-  }));
+  }, { root: null, rootMargin: '400px 0px', threshold: 0 });
+  toks.forEach(f => io.observe(f));
+} else {
+  toks.forEach(f => { f.src = f.dataset.src; });
 }
 
 // Hero wall: make sure autoplay kicks in on browsers that need a nudge

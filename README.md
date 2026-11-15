@@ -7,7 +7,7 @@ Live: https://jacobmonroe2.github.io/we-just-chattin/
 
 ## Pages
 
-- `index.html` — video-wall hero with the mission, stats, clips reel, channels, next event, team, partner CTA
+- `index.html` — video-wall hero with the mission, stats, most-watched reel (TikTok embeds of the top 12 videos by views, ids hard-coded in the HTML), channels, next event, team, partner CTA
 - `partnerships.html` — metrics, audience, offerings, past work, contact
 - `styles.css` · `site.js` (mobile menu, lazy clip playback, tap-for-sound)
 
@@ -15,7 +15,6 @@ Live: https://jacobmonroe2.github.io/we-just-chattin/
 
 - `assets/logo.png` — WJC logo (transparent)
 - `assets/hero/wall-1..5.mp4` + `.jpg` — hero video wall. Each column is twelve 4-second answer segments (host and whip-pan trimmed off) from the 60 Instagram cuts, 432x768, no audio.
-- `assets/clips/clip-NN.mp4` + `.jpg` — 14 Instagram cuts for the reel, compressed to 720x1280, max 20s, with poster frames.
   Re-encode new clips the same way:
   ```bash
   ffmpeg -i IN.mp4 -t 20 -vf "scale=720:1280,fps=30" -c:v libx264 -crf 31 -pix_fmt yuv420p -movflags +faststart -c:a aac -b:a 64k -ac 1 assets/clips/clip-15.mp4
