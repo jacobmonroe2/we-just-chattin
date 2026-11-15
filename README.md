@@ -21,6 +21,8 @@ Live: https://jacobmonroe2.github.io/we-just-chattin/
   ffmpeg -ss 1 -i assets/clips/clip-15.mp4 -frames:v 1 -q:v 4 assets/clips/clip-15.jpg
   ```
 - `assets/team/` — team baby photos, 800x800 jpg
+- `assets/partners/` — grey sponsor logos (Buttah Skin, Capital City) and the Buttah sponsored video
+- `assets/events/` — Walk N' Talk promo video + poster
 - `assets/cursor.svg` / `cursor-32.png` / `cursor-64.png` — the spatula cursor (edit the SVG, re-rasterize the PNGs)
 
 ## Numbers on the site
@@ -38,7 +40,7 @@ Pulled from public pages on Nov 15, 2026. Update them as they grow.
 
 ## Still placeholder
 
-- Partner names on the partnerships page (strip + case studies)
+- Capital City Mumbo Sauce recap copy and video (none found in Drive)
 - Contact email (`hello@wejustchattin.com`)
 
 ## Run locally

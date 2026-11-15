@@ -131,12 +131,17 @@ main > .section, main > .stats, main > .cta-band, main > .logo-strip { max-width
 .channel .arrow { position: absolute; top: 1.4rem; right: 1.6rem; color: var(--accent); font-size: 1.2rem; }
 
 /* ---------- Attend ---------- */
-.attend { display: grid; grid-template-columns: 1.3fr 1fr; gap: 3rem; align-items: start; }
+.attend { display: grid; grid-template-columns: 1fr 1.2fr; gap: 3rem; align-items: start; }
+.attend-media { display: grid; grid-template-columns: minmax(0, 220px) 1fr; gap: 1.25rem; align-items: start; }
+.walk-video { margin: 0; }
+.walk-video video { width: 100%; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 16px; background: var(--surface); display: block; }
+.walk-video.sound video { outline: 2px solid var(--accent); }
+.walk-video figcaption { font-size: 0.8rem; color: var(--muted); margin-top: 0.5rem; }
 .attend-copy p { color: var(--muted); }
 .checks { list-style: none; padding: 0; margin: 1.5rem 0 0; display: grid; gap: 0.6rem; }
 .checks li { padding-left: 1.6rem; position: relative; }
 .checks li::before { content: "✓"; position: absolute; left: 0; color: #8fd68f; font-weight: 700; }
-.next-event { background: var(--red); color: #fff; border-radius: var(--radius); padding: 2rem; position: sticky; top: 6rem; }
+.next-event { background: var(--red); color: #fff; border-radius: var(--radius); padding: 2rem; }
 .next-event .chip { background: rgba(255,255,255,0.18); color: #fff; }
 .next-event h3 { font-family: "Montserrat", sans-serif; font-weight: 800; letter-spacing: -0.02em; font-size: 2.2rem; line-height: 1; margin-bottom: 0.4rem; }
 .next-event .date { font-weight: 600; margin-bottom: 0.5rem; }
@@ -161,14 +166,20 @@ main > .section, main > .stats, main > .cta-band, main > .logo-strip { max-width
 .strip-label { font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem; }
 .logo-strip ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 1rem 2.5rem; align-items: center; }
 .logo-strip li { font-family: "Montserrat", sans-serif; font-weight: 800; font-size: 1.1rem; letter-spacing: 0.02em; text-transform: uppercase; color: var(--muted); opacity: 0.7; }
-.logo-strip img { height: 28px; width: auto; opacity: 0.7; filter: grayscale(1) brightness(1.6); }
+.logo-strip img { height: 30px; width: auto; opacity: 0.9; }
+.logo-strip img[alt="Buttah Skin"] { height: 40px; }
+.logo-strip li { line-height: 0; }
 .steps { counter-reset: step; list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--border); }
 .steps li { counter-increment: step; display: grid; grid-template-columns: 4rem 1fr; gap: 1.5rem; padding: 1.75rem 0; border-bottom: 1px solid var(--border); }
 .steps li::before { content: counter(step, decimal-leading-zero); font-family: "Montserrat", sans-serif; font-weight: 800; font-size: 2.2rem; color: var(--accent); line-height: 1; }
 .steps p { color: var(--muted); margin: 0; }
-.cases { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+.cases { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 360px)); gap: 1rem; }
 .case { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
-.case img { aspect-ratio: 16/10; object-fit: cover; }
+.case-video { width: 100%; aspect-ratio: 9 / 16; max-height: 520px; object-fit: cover; background: #000; display: block; }
+.case-logo-panel { aspect-ratio: 9 / 16; max-height: 520px; display: grid; place-items: center; background: var(--bg-2); border-bottom: 1px solid var(--border); }
+.case-logo-panel img { width: 70%; height: auto; }
+.case .body .case-logo { height: 20px; width: auto; margin-bottom: 1rem; opacity: 0.9; }
+.case .body .case-logo[alt="Buttah Skin"] { height: 28px; }
 .case .body { padding: 1.5rem; }
 .case .body p { color: var(--muted); }
 .case .body a { color: var(--accent); font-weight: 600; text-decoration: none; }
@@ -199,7 +210,7 @@ footer { border-top: 1px solid var(--border); padding: 3rem var(--gutter) 2rem; 
   .wall video:nth-child(n+4) { display: none; }
   .stats { grid-template-columns: repeat(2, 1fr); }
   .attend { grid-template-columns: 1fr; }
-  .next-event { position: static; }
+  .attend-media { grid-template-columns: minmax(0, 200px) 1fr; }
   .foot-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 600px) {
@@ -215,6 +226,8 @@ footer { border-top: 1px solid var(--border); padding: 3rem var(--gutter) 2rem; 
   .stats, .stats.big { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
   .steps li { grid-template-columns: 3rem 1fr; gap: 1rem; }
   .team { grid-template-columns: repeat(2, 1fr); gap: 0.8rem; }
+  .attend-media { grid-template-columns: 1fr; }
+  .walk-video { max-width: 240px; }
   .tok { width: 62vw; }
 }
 @media (prefers-reduced-motion: reduce) {

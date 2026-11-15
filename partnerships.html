@@ -9,7 +9,7 @@
   <link rel="icon" href="assets/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=8">
+  <link rel="stylesheet" href="styles.css?v=10">
 </head>
 <body>
   <header class="nav">
@@ -40,10 +40,13 @@
       </div>
     </section>
 
-    <!-- PARTNER STRIP (Rox-style). PLACEHOLDER names: swap for real partner logos -->
+    <!-- PARTNER STRIP (Rox-style) -->
     <section class="logo-strip" aria-label="Past partners">
-      <p class="strip-label">Conversations made with</p>
-      <ul><li>Partner One</li><li>Partner Two</li><li>Partner Three</li><li>Partner Four</li><li>Partner Five</li></ul>
+      <p class="strip-label">Recent sponsors</p>
+      <ul>
+        <li><img src="assets/partners/buttah-skin.png" alt="Buttah Skin"></li>
+        <li><img src="assets/partners/capital-city.png" alt="Capital City Mumbo Sauce"></li>
+      </ul>
     </section>
 
     <!-- METRICS (real, pulled Nov 15 2026; Instagram views pending) -->
@@ -82,12 +85,24 @@
 
     <!-- PAST WORK -->
     <section class="section">
-      <p class="label">Past work</p>
-      <!-- PLACEHOLDER case studies: swap in real partners, results, and links -->
-      <div class="cases">
-        <article class="case"><img src="assets/hero/wall-1.jpg" alt=""><div class="body"><span class="chip">Partner name</span><h3>Custom episode</h3><p>One line on the objective, what we made, and the result.</p><a href="#">See it for yourself →</a></div></article>
-        <article class="case"><img src="assets/hero/wall-3.jpg" alt=""><div class="body"><span class="chip">Partner name</span><h3>Event sponsorship</h3><p>One line on the objective, what we made, and the result.</p><a href="#">Take a look →</a></div></article>
-        <article class="case"><img src="assets/hero/wall-5.jpg" alt=""><div class="body"><span class="chip">Partner name</span><h3>Social campaign</h3><p>One line on the objective, what we made, and the result.</p><a href="#">Watch the series →</a></div></article>
+      <p class="label">Recent sponsors</p>
+            <div class="cases">
+        <article class="case">
+          <video class="case-video" controls playsinline preload="metadata" poster="assets/partners/buttah.jpg" src="assets/partners/buttah.mp4"></video>
+          <div class="body">
+            <img class="case-logo" src="assets/partners/buttah-skin.png" alt="Buttah Skin">
+            <h3>Sponsored street interview</h3>
+            <p>A campus conversation on whether HBCU alumni give back enough, with Buttah&rsquo;s Glow for Good campaign woven into the episode instead of bolted on.</p>
+          </div>
+        </article>
+        <article class="case">
+          <div class="case-logo-panel"><img src="assets/partners/capital-city.png" alt="Capital City Mumbo Sauce"></div>
+          <div class="body">
+            <img class="case-logo" src="assets/partners/capital-city.png" alt="Capital City Mumbo Sauce">
+            <h3>Sponsored content</h3>
+            <p>The DMV&rsquo;s own mumbo sauce, in the hands of our guests on camera. Recap coming soon.</p>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -119,6 +134,6 @@
     <p class="copy">&copy; <span id="year"></span> We Just Chattin &middot; Washington, DC</p>
   </footer>
 
-  <script src="site.js?v=7"></script>
+  <script src="site.js?v=8"></script>
 </body>
 </html>

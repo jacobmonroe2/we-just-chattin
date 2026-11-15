@@ -35,6 +35,17 @@ if (player) {
   player.addEventListener('cancel', e => { e.preventDefault(); close(); });
 }
 
+// Walk N' Talk promo: lazy-load, autoplay muted when visible, tap for sound
+const walk = document.querySelector('.walk-video video');
+if (walk) {
+  const fig = walk.parentElement;
+  const io = new IntersectionObserver(es => es.forEach(({isIntersecting}) => {
+    if (isIntersecting) { if (!walk.src) { walk.src = walk.dataset.src; } walk.play().catch(() => {}); } else { walk.pause(); }
+  }), { threshold: 0.3 });
+  io.observe(walk);
+  walk.addEventListener('click', () => { walk.muted = !walk.muted; fig.classList.toggle('sound', !walk.muted); if (!walk.muted) { walk.currentTime = 0; walk.play().catch(() => {}); } });
+}
+
 // Hero wall: make sure autoplay kicks in on browsers that need a nudge
 document.querySelectorAll('.wall video').forEach((v, i) => {
   const offset = i * 9.5; // seconds: columns start on different people and cut at different times
