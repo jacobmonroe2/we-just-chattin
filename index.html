@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>We Just Chattin</title>
+  <meta name="description" content="We Just Chattin — real conversations, no script, no filter.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#top">We Just <span>Chattin</span></a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#episodes">Episodes</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <p class="eyebrow">New episodes every week</p>
+      <h1>Real talk.<br>No script. No filter.</h1>
+      <p class="lede">
+        Pull up a chair. We Just Chattin is exactly what it sounds like: honest conversations
+        about life, culture, and whatever's on our minds this week.
+      </p>
+      <div class="actions">
+        <a class="btn primary" href="#episodes">Listen now</a>
+        <a class="btn ghost" href="#about">Who are we?</a>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <h2>About the show</h2>
+      <p>
+        We started We Just Chattin because the best conversations happen when nobody's
+        performing. Every episode is unscripted, a little chaotic, and always honest.
+        Grab your headphones and join the chat.
+      </p>
+      <div class="cards">
+        <article class="card">
+          <h3>Unfiltered</h3>
+          <p>We say what we actually think. Sometimes that's a hot take, sometimes it's a confession.</p>
+        </article>
+        <article class="card">
+          <h3>Weekly</h3>
+          <p>New episodes drop every week. Consistency is the one thing we take seriously.</p>
+        </article>
+        <article class="card">
+          <h3>Community</h3>
+          <p>Your questions, stories, and hot takes shape the show. Send them in.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="episodes" class="section">
+      <h2>Latest episodes</h2>
+      <ul class="episodes">
+        <li class="episode">
+          <span class="num">01</span>
+          <div>
+            <h3>Episode title goes here</h3>
+            <p>A short description of what we got into this week.</p>
+          </div>
+          <a class="btn small" href="#">Play</a>
+        </li>
+        <li class="episode">
+          <span class="num">02</span>
+          <div>
+            <h3>Episode title goes here</h3>
+            <p>A short description of what we got into this week.</p>
+          </div>
+          <a class="btn small" href="#">Play</a>
+        </li>
+        <li class="episode">
+          <span class="num">03</span>
+          <div>
+            <h3>Episode title goes here</h3>
+            <p>A short description of what we got into this week.</p>
+          </div>
+          <a class="btn small" href="#">Play</a>
+        </li>
+      </ul>
+    </section>
+
+    <section id="contact" class="section contact">
+      <h2>Join the chat</h2>
+      <p>Got a question, a story, or a topic we need to cover? Hit us up.</p>
+      <div class="socials">
+        <a href="#">Instagram</a>
+        <a href="#">TikTok</a>
+        <a href="#">YouTube</a>
+        <a href="#">Spotify</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> We Just Chattin. All rights reserved.</p>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
