@@ -17,6 +17,11 @@
 }
 
 * { box-sizing: border-box; }
+html, body, a, button, .clip, [role="button"] {
+  cursor: url("assets/cursor-32.png") 3 8, auto;
+  cursor: -webkit-image-set(url("assets/cursor-32.png") 1x, url("assets/cursor-64.png") 2x) 3 8, auto;
+  cursor: image-set(url("assets/cursor-32.png") 1x, url("assets/cursor-64.png") 2x) 3 8, auto;
+}
 html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--bg); color: var(--text); font-family: "Montserrat", system-ui, -apple-system, sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; }
 img, video { max-width: 100%; display: block; }
@@ -44,7 +49,7 @@ h3 { font-weight: 800; font-size: 1.15rem; margin: 0 0 0.4em; line-height: 1.2; 
 .nav nav a { text-decoration: none; color: var(--muted); font-weight: 500; font-size: 0.92rem; }
 .nav nav a:hover, .nav nav a[aria-current] { color: var(--text); }
 .nav-cta { color: var(--accent-ink) !important; background: var(--accent); padding: 0.55rem 1.1rem; border-radius: 999px; font-weight: 600 !important; }
-.menu-btn { display: none; background: none; border: 1px solid var(--border); color: var(--text); font-size: 1.1rem; border-radius: 10px; padding: 0.4rem 0.7rem; cursor: pointer; }
+.menu-btn { display: none; background: none; border: 1px solid var(--border); color: var(--text); font-size: 1.1rem; border-radius: 10px; padding: 0.4rem 0.7rem; }
 
 /* ---------- Layout ---------- */
 main > .section, main > .stats-strip, main > .cta-band, main > .logo-strip { max-width: var(--max); margin-left: auto; margin-right: auto; padding-left: var(--gutter); padding-right: var(--gutter); }
@@ -87,7 +92,7 @@ main > .section, main > .stats-strip, main > .cta-band, main > .logo-strip { max
 /* ---------- Clips reel ---------- */
 .reel { display: flex; gap: 0.9rem; overflow-x: auto; scroll-snap-type: x mandatory; padding: 0.25rem var(--gutter) 1rem; margin: 0 calc(-1 * var(--gutter)); scrollbar-width: none; }
 .reel::-webkit-scrollbar { display: none; }
-.clip { flex: 0 0 auto; width: clamp(200px, 22vw, 260px); aspect-ratio: 9 / 16; margin: 0; border-radius: 16px; overflow: hidden; background: var(--surface); scroll-snap-align: start; position: relative; cursor: pointer; }
+.clip { flex: 0 0 auto; width: clamp(200px, 22vw, 260px); aspect-ratio: 9 / 16; margin: 0; border-radius: 16px; overflow: hidden; background: var(--surface); scroll-snap-align: start; position: relative; }
 .clip video { width: 100%; height: 100%; object-fit: cover; }
 .clip::after { content: "🔇"; position: absolute; right: 0.7rem; bottom: 0.7rem; font-size: 0.85rem; background: rgba(0,0,0,0.55); border-radius: 999px; padding: 0.3rem 0.5rem; pointer-events: none; }
 .clip.sound::after { content: "🔊"; background: var(--accent); }

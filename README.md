@@ -14,13 +14,15 @@ Live: https://jacobmonroe2.github.io/we-just-chattin/
 ## Assets
 
 - `assets/logo.png` — WJC logo (transparent)
-- `assets/clips/clip-NN.mp4` + `.jpg` — 14 Instagram cuts, compressed to 720x1280, max 20s, with poster frames.
+- `assets/hero/wall-1..5.mp4` + `.jpg` — hero video wall. Each column is twelve 4-second answer segments (host and whip-pan trimmed off) from the 60 Instagram cuts, 432x768, no audio.
+- `assets/clips/clip-NN.mp4` + `.jpg` — 14 Instagram cuts for the reel, compressed to 720x1280, max 20s, with poster frames.
   Re-encode new clips the same way:
   ```bash
   ffmpeg -i IN.mp4 -t 20 -vf "scale=720:1280,fps=30" -c:v libx264 -crf 31 -pix_fmt yuv420p -movflags +faststart -c:a aac -b:a 64k -ac 1 assets/clips/clip-15.mp4
   ffmpeg -ss 1 -i assets/clips/clip-15.mp4 -frames:v 1 -q:v 4 assets/clips/clip-15.jpg
   ```
 - `assets/team/` — team baby photos, 800x800 jpg
+- `assets/cursor.svg` / `cursor-32.png` / `cursor-64.png` — the spatula cursor (edit the SVG, re-rasterize the PNGs)
 
 ## Numbers on the site
 

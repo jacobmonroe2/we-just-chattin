@@ -41,4 +41,16 @@ if (clips.length && 'IntersectionObserver' in window) {
 }
 
 // Hero wall: make sure autoplay kicks in on browsers that need a nudge
-document.querySelectorAll('.wall video').forEach(v => v.play().catch(() => {}));
+document.querySelectorAll('.wall video').forEach((v, i) => {
+  const offset = i * 9.5; // seconds: columns start on different people and cut at different times
+  let done = false;
+  const seek = () => {
+    if (done || offset === 0) { done = true; return; }
+    try { if (v.seekable.length && v.seekable.end(0) > offset) { v.currentTime = offset; done = true; } } catch (e) {}
+  };
+  seek();
+  v.addEventListener('loadedmetadata', seek);
+  v.addEventListener('canplay', seek);
+  v.addEventListener('progress', seek);
+  v.play().catch(() => {});
+});
