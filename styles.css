@@ -162,12 +162,12 @@ main > .section, main > .stats, main > .cta-band, main > .logo-strip { max-width
 .cta-band p { color: var(--text); font-size: 1.25rem; font-weight: 600; max-width: 34rem; margin: 0 auto 1.5rem; }
 
 /* ---------- Partnerships page ---------- */
-.logo-strip { padding-top: 1.5rem; padding-bottom: 1rem; }
+.logo-strip { padding-top: 2rem; padding-bottom: 1.5rem; }
 .strip-label { font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem; }
-.logo-strip ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 1rem 2.5rem; align-items: center; }
+.logo-strip ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 1.5rem 4rem; align-items: center; }
 .logo-strip li { font-family: "Montserrat", sans-serif; font-weight: 800; font-size: 1.1rem; letter-spacing: 0.02em; text-transform: uppercase; color: var(--muted); opacity: 0.7; }
-.logo-strip img { height: 30px; width: auto; opacity: 0.9; }
-.logo-strip img[alt="Buttah Skin"] { height: 40px; }
+.logo-strip img { height: 52px; width: auto; opacity: 0.9; }
+.logo-strip img[alt="Buttah Skin"] { height: 68px; }
 .logo-strip li { line-height: 0; }
 .steps { counter-reset: step; list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--border); }
 .steps li { counter-increment: step; display: grid; grid-template-columns: 4rem 1fr; gap: 1.5rem; padding: 1.75rem 0; border-bottom: 1px solid var(--border); }
@@ -225,6 +225,9 @@ footer { border-top: 1px solid var(--border); padding: 3rem var(--gutter) 2rem; 
   .foot-grid { grid-template-columns: 1fr; }
   .stats, .stats.big { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
   .steps li { grid-template-columns: 3rem 1fr; gap: 1rem; }
+  .logo-strip img { height: 40px; }
+  .logo-strip img[alt="Buttah Skin"] { height: 52px; }
+  .logo-strip ul { gap: 1rem 2.5rem; }
   .team { grid-template-columns: repeat(2, 1fr); gap: 0.8rem; }
   .attend-media { grid-template-columns: 1fr; }
   .walk-video { max-width: 240px; }
