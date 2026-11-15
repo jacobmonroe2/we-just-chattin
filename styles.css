@@ -19,7 +19,7 @@
 * { box-sizing: border-box; }
 html {
   cursor: url("assets/cursor-32.png") 3 8, auto;
-  cursor: -webkit-image-set(url("assets/cursor-32.png") 1x, url("assets/cursor-64.png") 2x) 3 8, auto;
+  cursor: url("assets/cursor.svg") 3 8, auto;
 }
 *, *::before, *::after { cursor: inherit; }
 html { scroll-behavior: smooth; }
