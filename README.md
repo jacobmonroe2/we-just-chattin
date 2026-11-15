@@ -7,7 +7,7 @@ Live: https://jacobmonroe2.github.io/we-just-chattin/
 
 ## Pages
 
-- `index.html` — video-wall hero with the mission, stats, most-watched reel (TikTok embeds of the top 12 videos by views, ids hard-coded in the HTML), channels, next event, team, partner CTA
+- `index.html` — video-wall hero with the mission, stats, most-watched reel (TikTok and Instagram embeds of the top videos by views, ids hard-coded in the HTML), channels, next event, team, partner CTA
 - `partnerships.html` — metrics, audience, offerings, past work, contact
 - `styles.css` · `site.js` (mobile menu, lazy clip playback, tap-for-sound)
 
