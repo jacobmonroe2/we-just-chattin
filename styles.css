@@ -98,7 +98,11 @@ main > .section, main > .stats-strip, main > .cta-band, main > .logo-strip { max
 .channels { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
 .channel { position: relative; display: flex; flex-direction: column; gap: 0.3rem; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.6rem 1.75rem; text-decoration: none; transition: border-color 0.15s, transform 0.15s; }
 .channel:hover { border-color: var(--accent); transform: translateY(-2px); }
-.channel .label { font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+.channel .label { display: flex; align-items: center; gap: 0.5rem; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.4rem; }
+.icon { width: 1.35rem; height: 1.35rem; flex: 0 0 auto; }
+.channel .icon { width: 1.6rem; height: 1.6rem; color: var(--text); }
+.channel:hover .icon { color: var(--accent); }
+.foot-grid a .icon { display: inline-block; vertical-align: -0.3em; margin-right: 0.45rem; width: 1.1rem; height: 1.1rem; }
 .channel strong { font-family: "Montserrat", sans-serif; font-weight: 800; letter-spacing: -0.02em; font-size: 1.5rem; line-height: 1.1; }
 .channel .meta { color: var(--muted); font-size: 0.9rem; }
 .channel .arrow { position: absolute; top: 1.4rem; right: 1.6rem; color: var(--accent); font-size: 1.2rem; }
