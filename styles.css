@@ -17,11 +17,18 @@
 }
 
 * { box-sizing: border-box; }
-html {
-  cursor: url("assets/cursor-32.png") 3 8, auto;
-  cursor: url("assets/cursor.svg") 3 8, auto;
+/* Spatula cursor: drawn by JS so it stays put over video and animation (CSS cursors reset when the pointer stops) */
+@media (hover: hover) and (pointer: fine) {
+  html.has-spatula, html.has-spatula * { cursor: none !important; }
+  html.has-spatula iframe { cursor: auto !important; }
 }
-*, *::before, *::after { cursor: inherit; }
+.spatula {
+  position: fixed; left: 0; top: 0; width: 34px; height: 34px; pointer-events: none; z-index: 2147483647;
+  background: url("assets/cursor.svg") no-repeat center / contain;
+  transform: translate(-9999px, -9999px); will-change: transform; opacity: 0; transition: opacity 0.12s;
+}
+.spatula.on { opacity: 1; }
+.spatula.down { filter: brightness(1.15); }
 html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--bg); color: var(--text); font-family: "Montserrat", system-ui, -apple-system, sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; }
 img, video { max-width: 100%; display: block; }

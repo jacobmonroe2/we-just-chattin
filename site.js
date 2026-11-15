@@ -1,3 +1,24 @@
+// Spatula cursor (pointer devices only)
+if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+  const el = document.createElement('div');
+  el.className = 'spatula';
+  el.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(el);
+  document.documentElement.classList.add('has-spatula');
+  let x = -9999, y = -9999, raf = 0;
+  const draw = () => { el.style.transform = `translate(${x - 3}px, ${y - 8}px)`; raf = 0; };
+  window.addEventListener('mousemove', e => {
+    x = e.clientX; y = e.clientY;
+    if (!raf) raf = requestAnimationFrame(draw);
+    el.classList.toggle('on', !(e.target && e.target.tagName === 'IFRAME'));
+  }, { passive: true });
+  window.addEventListener('mousedown', () => el.classList.add('down'));
+  window.addEventListener('mouseup', () => el.classList.remove('down'));
+  document.addEventListener('mouseleave', () => el.classList.remove('on'));
+  document.addEventListener('mouseenter', () => el.classList.add('on'));
+  window.addEventListener('blur', () => el.classList.remove('on'));
+}
+
 // Footer year
 document.getElementById('year').textContent = new Date().getFullYear();
 
