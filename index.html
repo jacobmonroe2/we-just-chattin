@@ -4,104 +4,183 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>We Just Chattin</title>
-  <meta name="description" content="We Just Chattin — real conversations, no script, no filter.">
+  <meta name="description" content="We Just Chattin builds community through thought-provoking conversations. Watch, attend, partner.">
+  <meta property="og:title" content="We Just Chattin">
+  <meta property="og:description" content="Build community through thought-provoking conversations.">
+  <meta property="og:image" content="assets/og-cover.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="nav">
-    <a class="brand" href="#top">We Just <span>Chattin</span></a>
+    <a class="brand" href="index.html">WE JUST <span>CHATTIN</span></a>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false">☰</button>
     <nav>
-      <a href="#about">About</a>
-      <a href="#episodes">Episodes</a>
-      <a href="#contact">Contact</a>
+      <a href="#work">Our Work</a>
+      <a href="#attend">Attend</a>
+      <a href="#team">Team</a>
+      <a href="partnerships.html" class="nav-cta">Partnerships</a>
     </nav>
   </header>
 
-  <main id="top">
+  <main>
+    <!-- HERO / MISSION -->
     <section class="hero">
-      <p class="eyebrow">New episodes every week</p>
-      <h1>Real talk.<br>No script. No filter.</h1>
+      <p class="eyebrow">We Just Chattin</p>
+      <h1>Build <em>community</em> through thought-provoking <em>conversations.</em></h1>
       <p class="lede">
-        Pull up a chair. We Just Chattin is exactly what it sounds like: honest conversations
-        about life, culture, and whatever's on our minds this week.
+        Unscripted, uncomfortable, unforgettable. We put real people across the table from each
+        other, press record, and let the conversation go where it needs to go.
       </p>
       <div class="actions">
-        <a class="btn primary" href="#episodes">Listen now</a>
-        <a class="btn ghost" href="#about">Who are we?</a>
+        <a class="btn primary" href="https://www.youtube.com/@wejustchattin" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+        <a class="btn ghost" href="partnerships.html">Partner with us</a>
       </div>
     </section>
 
-    <section id="about" class="section">
-      <h2>About the show</h2>
-      <p>
-        We started We Just Chattin because the best conversations happen when nobody's
-        performing. Every episode is unscripted, a little chaotic, and always honest.
-        Grab your headphones and join the chat.
-      </p>
-      <div class="cards">
-        <article class="card">
-          <h3>Unfiltered</h3>
-          <p>We say what we actually think. Sometimes that's a hot take, sometimes it's a confession.</p>
+    <!-- FEATURED VIDEO -->
+    <section class="video-wrap">
+      <div class="video">
+        <!-- Replace VIDEO_ID with the YouTube video id of your best episode -->
+        <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID" title="We Just Chattin featured episode"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen loading="lazy"></iframe>
+      </div>
+      <p class="caption">Latest episode. New conversations every week.</p>
+    </section>
+
+    <!-- QUICK STATS -->
+    <section class="stats-strip">
+      <!-- PLACEHOLDER numbers: update before sharing with sponsors -->
+      <div><strong>250K+</strong><span>Views across platforms</span></div>
+      <div><strong>12</strong><span>Live events hosted</span></div>
+      <div><strong>1,800+</strong><span>Attendees in the room</span></div>
+      <div><strong>9%</strong><span>Average engagement rate</span></div>
+      <a class="strip-link" href="partnerships.html">Full numbers for partners →</a>
+    </section>
+
+    <!-- OUR WORK / CHANNELS -->
+    <section id="work" class="section">
+      <h2 class="display">We're not afraid to <em>go there.</em></h2>
+      <p class="section-lede">Three places to find the conversation. Pick your platform.</p>
+      <div class="channels">
+        <article class="channel">
+          <span class="chip">Long form</span>
+          <h3>YouTube</h3>
+          <p>Full episodes. Strangers, friends, and rivals talking about the things most people avoid.</p>
+          <a href="https://www.youtube.com/@wejustchattin" target="_blank" rel="noopener">YouTube ↗</a>
         </article>
-        <article class="card">
-          <h3>Weekly</h3>
-          <p>New episodes drop every week. Consistency is the one thing we take seriously.</p>
+        <article class="channel">
+          <span class="chip">Behind the scenes</span>
+          <h3>Instagram</h3>
+          <p>Event recaps, guest announcements, and the moments that didn't make the cut.</p>
+          <a href="https://www.instagram.com/wejustchattin" target="_blank" rel="noopener">Instagram ↗</a>
         </article>
-        <article class="card">
-          <h3>Community</h3>
-          <p>Your questions, stories, and hot takes shape the show. Send them in.</p>
+        <article class="channel">
+          <span class="chip">Short form</span>
+          <h3>TikTok</h3>
+          <p>The hottest takes in sixty seconds. Where most people meet us first.</p>
+          <a href="https://www.tiktok.com/@wejustchattin" target="_blank" rel="noopener">TikTok ↗</a>
         </article>
       </div>
     </section>
 
-    <section id="episodes" class="section">
-      <h2>Latest episodes</h2>
-      <ul class="episodes">
-        <li class="episode">
-          <span class="num">01</span>
-          <div>
-            <h3>Episode title goes here</h3>
-            <p>A short description of what we got into this week.</p>
-          </div>
-          <a class="btn small" href="#">Play</a>
-        </li>
-        <li class="episode">
-          <span class="num">02</span>
-          <div>
-            <h3>Episode title goes here</h3>
-            <p>A short description of what we got into this week.</p>
-          </div>
-          <a class="btn small" href="#">Play</a>
-        </li>
-        <li class="episode">
-          <span class="num">03</span>
-          <div>
-            <h3>Episode title goes here</h3>
-            <p>A short description of what we got into this week.</p>
-          </div>
-          <a class="btn small" href="#">Play</a>
-        </li>
-      </ul>
+    <!-- MOMENTS GALLERY -->
+    <section class="section moments">
+      <h2 class="display">In the <em>room.</em></h2>
+      <div class="gallery">
+        <img src="assets/moments/moment-1.svg" alt="Guests in conversation at a We Just Chattin event">
+        <img src="assets/moments/moment-2.svg" alt="Audience reacting during a live chat">
+        <img src="assets/moments/moment-3.svg" alt="Host and guest mid-conversation">
+        <img src="assets/moments/moment-4.svg" alt="Crowd at a We Just Chattin live event">
+        <img src="assets/moments/moment-5.svg" alt="Behind the scenes on set">
+        <img src="assets/moments/moment-6.svg" alt="Group photo after a taping">
+      </div>
     </section>
 
-    <section id="contact" class="section contact">
-      <h2>Join the chat</h2>
-      <p>Got a question, a story, or a topic we need to cover? Hit us up.</p>
-      <div class="socials">
-        <a href="#">Instagram</a>
-        <a href="#">TikTok</a>
-        <a href="#">YouTube</a>
-        <a href="#">Spotify</a>
+    <!-- ATTEND -->
+    <section id="attend" class="section attend">
+      <div class="attend-copy">
+        <h2 class="display">Pull up to the <em>next chat.</em></h2>
+        <p>
+          Every episode is filmed in front of a live room, and the room is part of the show.
+          Come be a voice in the conversation, ask the question nobody else will, and meet
+          people you'd never otherwise sit across from.
+        </p>
+        <ul class="checks">
+          <li>Open to the public. Limited seats.</li>
+          <li>Audience Q&amp;A in every taping.</li>
+          <li>Be the first to hear about new topics and guests.</li>
+        </ul>
+        <div class="actions">
+          <a class="btn primary" href="mailto:hello@wejustchattin.com?subject=RSVP">RSVP for the next event</a>
+          <a class="btn ghost" href="https://www.instagram.com/wejustchattin" target="_blank" rel="noopener">Follow for dates</a>
+        </div>
       </div>
+      <aside class="next-event">
+        <!-- PLACEHOLDER event: update date, topic, and location -->
+        <span class="chip">Next event</span>
+        <p class="date">Sat · Dec 6 · 7:00 PM</p>
+        <h3>"Is loyalty overrated?"</h3>
+        <p class="muted">Location announced to RSVPs 48 hours before.</p>
+      </aside>
+    </section>
+
+    <!-- TEAM -->
+    <section id="team" class="section">
+      <h2 class="display">The people behind the <em>chat.</em></h2>
+      <p class="section-lede">We've been talking since before we could. Proof below.</p>
+      <div class="team">
+        <!-- PLACEHOLDER team: swap names, roles, and baby photos in assets/team/ -->
+        <figure class="member">
+          <img src="assets/team/baby-1.svg" alt="Baby photo of Team Member One">
+          <figcaption><strong>Team Member One</strong><span>Founder &amp; Host</span></figcaption>
+        </figure>
+        <figure class="member">
+          <img src="assets/team/baby-2.svg" alt="Baby photo of Team Member Two">
+          <figcaption><strong>Team Member Two</strong><span>Co-Host &amp; Producer</span></figcaption>
+        </figure>
+        <figure class="member">
+          <img src="assets/team/baby-3.svg" alt="Baby photo of Team Member Three">
+          <figcaption><strong>Team Member Three</strong><span>Creative Director</span></figcaption>
+        </figure>
+        <figure class="member">
+          <img src="assets/team/baby-4.svg" alt="Baby photo of Team Member Four">
+          <figcaption><strong>Team Member Four</strong><span>Events &amp; Community</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- PARTNER CTA -->
+    <section class="cta-band">
+      <h2 class="display">Let's build <em>community</em> together.</h2>
+      <p>Custom episodes, event sponsorships, product integrations, and more. We'll find the fit.</p>
+      <a class="btn primary" href="partnerships.html">See partnership options →</a>
     </section>
   </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> We Just Chattin. All rights reserved.</p>
+    <div class="foot-grid">
+      <div>
+        <p class="brand">WE JUST <span>CHATTIN</span></p>
+        <p class="muted">Build community through thought-provoking conversations.</p>
+      </div>
+      <div>
+        <p class="foot-h">Social</p>
+        <a href="https://www.youtube.com/@wejustchattin" target="_blank" rel="noopener">YouTube ↗</a>
+        <a href="https://www.instagram.com/wejustchattin" target="_blank" rel="noopener">Instagram ↗</a>
+        <a href="https://www.tiktok.com/@wejustchattin" target="_blank" rel="noopener">TikTok ↗</a>
+      </div>
+      <div>
+        <p class="foot-h">Work with us</p>
+        <a href="partnerships.html">Partnerships</a>
+        <a href="mailto:hello@wejustchattin.com">hello@wejustchattin.com</a>
+      </div>
+    </div>
+    <p class="copy">&copy; <span id="year"></span> We Just Chattin</p>
   </footer>
 
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="site.js"></script>
 </body>
 </html>
