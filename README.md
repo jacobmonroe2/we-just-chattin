@@ -1,36 +1,51 @@
 # We Just Chattin
 
-Website for **We Just Chattin**: build community through thought-provoking conversations.
-Built for sponsors and potential attendees. Plain HTML, CSS, and a few lines of JS. No build step.
+Website for **We Just Chattin**: building community through thought-provoking conversations.
+Built for sponsors and potential attendees. Plain HTML, CSS and a little JS. No build step.
 
 Live: https://jacobmonroe2.github.io/we-just-chattin/
 
 ## Pages
 
-- `index.html` — mission, featured video, stats, channels, photo gallery, next event, team (with baby photos), partner CTA
+- `index.html` — video-wall hero with the mission, stats, clips reel, channels, next event, team, partner CTA
 - `partnerships.html` — metrics, audience, offerings, past work, contact
-- `styles.css` — shared styles · `site.js` — mobile menu + footer year
+- `styles.css` · `site.js` (mobile menu, lazy clip playback, tap-for-sound)
 
-## Before sharing with sponsors
+## Assets
 
-Everything marked `PLACEHOLDER` in the HTML needs real data:
+- `assets/logo.png` — WJC logo (transparent)
+- `assets/clips/clip-NN.mp4` + `.jpg` — 14 Instagram cuts, compressed to 720x1280, max 20s, with poster frames.
+  Re-encode new clips the same way:
+  ```bash
+  ffmpeg -i IN.mp4 -t 20 -vf "scale=720:1280,fps=30" -c:v libx264 -crf 31 -pix_fmt yuv420p -movflags +faststart -c:a aac -b:a 64k -ac 1 assets/clips/clip-15.mp4
+  ffmpeg -ss 1 -i assets/clips/clip-15.mp4 -frames:v 1 -q:v 4 assets/clips/clip-15.jpg
+  ```
+- `assets/team/` — baby photos (placeholders for now)
 
-1. **Numbers** — stats on both pages (views, engagement, attendees, audience breakdown).
-2. **Video** — replace `VIDEO_ID` in `index.html` with a real YouTube video id.
-3. **Social links** — currently point at `@wejustchattin` on YouTube, Instagram, TikTok. Fix if the handles differ.
-4. **Emails** — `hello@` and `partnerships@wejustchattin.com`.
-5. **Team** — names, roles, and baby photos in `assets/team/` (square images work best).
-6. **Photos** — replace the SVGs in `assets/moments/` with real event photos. Keep the filenames or update the `<img>` tags.
-7. **Next event** — date, topic, location card in the Attend section.
-8. **Case studies** — partner names, results, and links on the partnerships page.
+## Numbers on the site
+
+Pulled from public pages on Nov 15, 2026. Update them as they grow.
+
+| Metric | Value | Source |
+| --- | --- | --- |
+| TikTok views | 11.5M across 132 videos | tiktok.com/@wejchattin |
+| TikTok followers / likes | 10.1K / 1.4M | tiktok.com/@wejchattin |
+| Instagram followers / posts | 10K / 198 | instagram.com/wejchattin |
+| Instagram reel views | ~860K across 24 reels | instagram.com/wejchattin/reels (logged in) |
+| YouTube | 92 subscribers, 100 shorts | youtube.com/@WejChattin |
+| Events | 9 hosted on Posh | posh.vip/e/walk-n-talk-1 |
+
+## Still placeholder
+
+- Team names, roles and baby photos
+- Partner names on the partnerships page (strip + case studies)
+- Contact email (`hello@wejustchattin.com`)
 
 ## Run locally
 
 ```bash
 python3 -m http.server 8000
 ```
-
-Then open http://localhost:8000.
 
 ## Deploy
 
