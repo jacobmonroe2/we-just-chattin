@@ -90,22 +90,32 @@ main > .section, main > .stats, main > .cta-band, main > .logo-strip { max-width
 .stats-link { grid-column: 1 / -1; font-size: 0.9rem; font-weight: 600; text-decoration: none; }
 .stats-link:hover { color: var(--accent); }
 
-/* ---------- Most-watched reel (TikTok embeds) ---------- */
+/* ---------- Most-watched reel: poster cards + lightbox ---------- */
 .reel { display: flex; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; padding: 0.25rem var(--gutter) 1rem; margin: 0 calc(-1 * var(--gutter)); scrollbar-width: none; }
 .reel::-webkit-scrollbar { display: none; }
-.tok { flex: 0 0 auto; width: 325px; margin: 0; scroll-snap-align: start; }
-.tok-frame { width: 325px; height: 575px; border-radius: 16px; overflow: hidden; background: var(--surface); border: 1px solid var(--border); }
-.tok-frame iframe { width: 325px; height: 740px; border: 0; display: block; margin-top: -1px; }
-.tok figcaption { padding: 0.8rem 0.2rem 0; font-size: 0.9rem; }
-.tok figcaption strong { display: block; font-weight: 700; line-height: 1.3; margin-bottom: 0.2rem; }
+.tok { flex: 0 0 auto; width: clamp(210px, 20vw, 260px); margin: 0; scroll-snap-align: start; }
+.tok-poster { display: block; position: relative; width: 100%; aspect-ratio: 9 / 16; padding: 0; border: 0; border-radius: 16px; overflow: hidden; background: var(--surface); }
+.tok-poster img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.35s ease; }
+.tok-poster:hover img { transform: scale(1.04); }
+.tok-poster::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.45), transparent 45%); }
+.tok-poster .play { position: absolute; left: 50%; top: 50%; width: 58px; height: 58px; margin: -29px 0 0 -29px; border-radius: 50%; background: var(--accent); z-index: 1; display: grid; place-items: center; transition: transform 0.2s; box-shadow: 0 8px 24px rgba(0,0,0,0.35); }
+.tok-poster .play::before { content: ""; width: 0; height: 0; border-style: solid; border-width: 11px 0 11px 19px; border-color: transparent transparent transparent var(--accent-ink); margin-left: 4px; }
+.tok-poster:hover .play { transform: scale(1.08); }
+.tok figcaption { padding: 0.8rem 0.1rem 0; font-size: 0.9rem; }
+.tok figcaption strong { display: block; font-weight: 700; line-height: 1.3; margin-bottom: 0.25rem; }
 .tok figcaption .plat { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--accent); font-weight: 700; }
 .tok figcaption .plat .icon { width: 1rem; height: 1rem; color: var(--text); }
-.tok.instagram .tok-frame iframe { height: 780px; margin-top: -54px; background: #000; }
-.tok figcaption a { color: var(--muted); text-decoration: none; margin-left: 0.5rem; }
-.tok figcaption a:hover { color: var(--text); }
-.tok.more { display: grid; place-items: center; height: 575px; width: 220px; text-decoration: none; background: var(--accent); color: var(--accent-ink); border-radius: 16px; font-weight: 800; font-size: 1.3rem; line-height: 1.15; text-align: center; letter-spacing: -0.02em; }
-
+.tok.more { display: grid; place-items: center; width: 200px; aspect-ratio: 9 / 16; text-decoration: none; background: var(--accent); color: var(--accent-ink); border-radius: 16px; font-weight: 800; font-size: 1.2rem; line-height: 1.15; text-align: center; letter-spacing: -0.02em; }
 .tok.more.ig { background: var(--surface); color: var(--text); border: 1px solid var(--border); }
+
+.player { border: 0; padding: 0; background: transparent; max-width: none; max-height: none; width: fit-content; height: fit-content; margin: auto; overflow: visible; }
+.player::backdrop { background: rgba(0,0,0,0.85); backdrop-filter: blur(6px); }
+.player-frame { width: min(360px, 92vw); height: min(640px, 82vh); border-radius: 18px; overflow: hidden; background: #000; }
+.player-frame iframe { width: 100%; height: 100%; border: 0; display: block; }
+.player.instagram .player-frame iframe { height: calc(100% + 130px); margin-top: -54px; }
+.player-close { position: absolute; top: -2.6rem; right: 0; background: none; border: 0; color: #fff; font-size: 1.4rem; }
+.player-link { display: block; margin-top: 0.8rem; text-align: center; color: var(--muted); text-decoration: none; font-size: 0.9rem; }
+.player-link:hover { color: var(--text); }
 
 /* ---------- Channels ---------- */
 .channels { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
@@ -205,7 +215,7 @@ footer { border-top: 1px solid var(--border); padding: 3rem var(--gutter) 2rem; 
   .stats, .stats.big { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
   .steps li { grid-template-columns: 3rem 1fr; gap: 1rem; }
   .team { grid-template-columns: repeat(2, 1fr); gap: 0.8rem; }
-  .tok, .tok-frame, .tok-frame iframe { width: min(325px, 86vw); }
+  .tok { width: 62vw; }
 }
 @media (prefers-reduced-motion: reduce) {
   .wall video { display: none; }

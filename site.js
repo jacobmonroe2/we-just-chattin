@@ -17,17 +17,22 @@ if (btn && nav) {
   }));
 }
 
-// Most-watched reel: load each TikTok embed only as it nears the viewport
-const toks = document.querySelectorAll('.tok-frame iframe[data-src]');
-if (toks.length && 'IntersectionObserver' in window) {
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(({ target: f, isIntersecting }) => {
-      if (isIntersecting && !f.src) { f.src = f.dataset.src; io.unobserve(f); }
-    });
-  }, { root: null, rootMargin: '400px 0px', threshold: 0 });
-  toks.forEach(f => io.observe(f));
-} else {
-  toks.forEach(f => { f.src = f.dataset.src; });
+// Most-watched reel: poster cards open the platform's player in a lightbox
+const player = document.getElementById('player');
+if (player) {
+  const frame = player.querySelector('iframe');
+  const link = player.querySelector('.player-link');
+  const close = () => { frame.src = 'about:blank'; player.close(); };
+  document.querySelectorAll('.tok-poster').forEach(btn => btn.addEventListener('click', () => {
+    player.className = 'player ' + btn.dataset.platform;
+    link.href = btn.dataset.link;
+    link.textContent = 'Open on ' + (btn.dataset.platform === 'tiktok' ? 'TikTok' : 'Instagram') + ' ↗';
+    frame.src = btn.dataset.embed;
+    player.showModal();
+  }));
+  player.querySelector('.player-close').addEventListener('click', close);
+  player.addEventListener('click', e => { if (e.target === player) close(); });
+  player.addEventListener('cancel', e => { e.preventDefault(); close(); });
 }
 
 // Hero wall: make sure autoplay kicks in on browsers that need a nudge
