@@ -19,7 +19,7 @@
 * { box-sizing: border-box; }
 /* Spatula cursor: drawn by JS so it stays put over video and animation (CSS cursors reset when the pointer stops) */
 @media (hover: hover) and (pointer: fine) {
-  html.has-spatula, html.has-spatula * { cursor: none !important; }
+  html.has-spatula, html.has-spatula * { cursor: var(--cur, none) !important; }
   html.has-spatula iframe { cursor: auto !important; }
 }
 .spatula {
