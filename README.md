@@ -23,7 +23,6 @@ Live: https://jacobmonroe2.github.io/we-just-chattin/
 - `assets/team/` — team baby photos, 800x800 jpg
 - `assets/partners/` — grey sponsor logos and sponsored videos (Buttah Skin, Capital City Mambo Sauce)
 - `assets/events/` — Walk N' Talk promo video + poster
-- `assets/cursor.svg` / `cursor-32.png` / `cursor-64.png` — the spatula cursor (edit the SVG, re-rasterize the PNGs)
 
 ## Numbers on the site
 

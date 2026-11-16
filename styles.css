@@ -17,17 +17,6 @@
 }
 
 * { box-sizing: border-box; }
-/* Spatula cursor. Note: macOS 26 re-asserts the system arrow a few ms after Chrome sets any
-   custom cursor, and Chrome only re-applies it on mouse movement, so on affected Macs the spatula
-   shows while the pointer moves and the arrow returns when it rests. Safari and other systems are fine. */
-@media (hover: hover) and (pointer: fine) {
-  html {
-    cursor: url("assets/cursor-32.png") 3 8, auto;
-    cursor: url("assets/cursor.svg") 3 8, auto;
-  }
-  *, *::before, *::after { cursor: inherit; }
-  iframe { cursor: auto; }
-}
 html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--bg); color: var(--text); font-family: "Montserrat", system-ui, -apple-system, sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; }
 img, video { max-width: 100%; display: block; }
