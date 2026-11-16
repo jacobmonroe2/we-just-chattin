@@ -61,25 +61,3 @@ document.querySelectorAll('.wall video').forEach((v, i) => {
   v.play().catch(() => {});
 });
 
-// Past events: photo grid opens a viewer with prev/next
-const viewer = document.getElementById('viewer');
-if (viewer) {
-  const vimg = viewer.querySelector('img');
-  const vcap = viewer.querySelector('.viewer-cap');
-  let shots = [], idx = 0;
-  const show = i => {
-    idx = (i + shots.length) % shots.length;
-    const im = shots[idx].querySelector('img');
-    vimg.src = im.currentSrc || im.src; vimg.alt = im.alt; vcap.textContent = im.alt;
-  };
-  document.querySelectorAll('.shots').forEach(g => {
-    const all = [...g.querySelectorAll('.shot')];
-    all.forEach((b, i) => b.addEventListener('click', () => { shots = all; show(i); viewer.showModal(); }));
-  });
-  viewer.querySelector('.viewer-prev').addEventListener('click', () => show(idx - 1));
-  viewer.querySelector('.viewer-next').addEventListener('click', () => show(idx + 1));
-  viewer.querySelector('.viewer-close').addEventListener('click', () => viewer.close());
-  viewer.addEventListener('click', e => { if (e.target === viewer) viewer.close(); });
-  viewer.addEventListener('keydown', e => { if (e.key === 'ArrowLeft') show(idx - 1); if (e.key === 'ArrowRight') show(idx + 1); });
-  viewer.addEventListener('close', () => { vimg.removeAttribute('src'); });
-}

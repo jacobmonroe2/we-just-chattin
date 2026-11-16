@@ -25,10 +25,7 @@ Live: https://jacobmonroe2.github.io/we-just-chattin/
 - `assets/about/sizwe-session.jpg` — founder-letter photo (Season 2 session). The letter text lives in `index.html` under `<!-- ABOUT -->`.
 - `assets/team/` — team baby photos, 800x800 jpg
 - `assets/partners/` — grey sponsor logos and sponsored videos (Buttah Skin, Capital City Mambo Sauce)
-- `assets/events/` — Walk N' Talk promo video + poster
-- `assets/events/wnt-sep16/` — Sep 16, 2026 Walk N' Talk recap: flyer + six photos (long edge 1600px). Past events live in `index.html` under `<!-- PAST EVENTS -->`; add a recap by copying an `<article class="recap">` and dropping photos into `.shots`.
-- `assets/events/session-6/` — Session 6 (Oct 7, Founders Library) recap: lead photo + three grid photos. Instagram recap: instagram.com/p/DeSd5aACVND
-- `assets/events/session-4/` — Session 4 (Sep 23, Founders Library) recap: lead photo + three grid photos. Instagram recap: instagram.com/p/Dd2MfcsCVTS Season 2 schedule (Sessions 4–10) is a plain list at the end of the Past events section; dates/rooms come from the Posh listings.
+- `assets/events/` — Walk N' Talk promo video + poster, plus one proof photo per past event (`walk-n-talk-sep16.jpg`, `session-6-oct7.jpg`, `session-4-sep23.jpg`). Past events are cards in `index.html` under `<!-- PAST EVENTS -->`: photo, name, date and place, link.
 
 ## Numbers on the site
 
