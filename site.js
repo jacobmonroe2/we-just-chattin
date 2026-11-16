@@ -1,36 +1,3 @@
-// Spatula cursor (pointer devices only)
-if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
-  const el = document.createElement('div');
-  el.className = 'spatula';
-  el.setAttribute('aria-hidden', 'true');
-  document.body.appendChild(el);
-  document.documentElement.classList.add('has-spatula');
-  let x = -9999, y = -9999, raf = 0;
-  const draw = () => { el.style.transform = `translate(${x - 3}px, ${y - 8}px)`; raf = 0; };
-  window.addEventListener('mousemove', e => {
-    x = e.clientX; y = e.clientY;
-    if (!raf) raf = requestAnimationFrame(draw);
-    el.classList.toggle('on', !(e.target && e.target.tagName === 'IFRAME'));
-  }, { passive: true });
-  // macOS resets the hidden native cursor to the arrow when the pointer rests over repainting
-  // content (the video wall), and Chrome only pushes a cursor to the OS again when the computed
-  // cursor of the element under the pointer actually changes. So every element's cursor is driven
-  // by --cur, and we alternate it between two invisible cursors to force that update.
-  const blank = 'url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=") 0 0, none';
-  let flip = false, inside = false;
-  window.addEventListener('mousemove', () => { inside = true; }, { passive: true });
-  setInterval(() => {
-    if (!inside) return;
-    flip = !flip;
-    document.documentElement.style.setProperty('--cur', flip ? blank : 'none');
-  }, 150);
-  window.addEventListener('mousedown', () => el.classList.add('down'));
-  window.addEventListener('mouseup', () => el.classList.remove('down'));
-  document.addEventListener('mouseleave', () => { el.classList.remove('on'); inside = false; });
-  document.addEventListener('mouseenter', () => el.classList.add('on'));
-  window.addEventListener('blur', () => el.classList.remove('on'));
-}
-
 // Footer year
 document.getElementById('year').textContent = new Date().getFullYear();
 
