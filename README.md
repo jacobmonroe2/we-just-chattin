@@ -22,6 +22,7 @@ Live: https://jacobmonroe2.github.io/we-just-chattin/
   ffmpeg -i IN.mp4 -t 20 -vf "scale=720:1280,fps=30" -c:v libx264 -crf 31 -pix_fmt yuv420p -movflags +faststart -c:a aac -b:a 64k -ac 1 assets/clips/clip-15.mp4
   ffmpeg -ss 1 -i assets/clips/clip-15.mp4 -frames:v 1 -q:v 4 assets/clips/clip-15.jpg
   ```
+- `assets/about/sizwe-session.jpg` — founder-letter photo (Season 2 session). The letter text lives in `index.html` under `<!-- ABOUT -->`.
 - `assets/team/` — team baby photos, 800x800 jpg
 - `assets/partners/` — grey sponsor logos and sponsored videos (Buttah Skin, Capital City Mambo Sauce)
 - `assets/events/` — Walk N' Talk promo video + poster
