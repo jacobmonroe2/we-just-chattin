@@ -25,7 +25,7 @@ p { margin: 0 0 1em; }
 .muted { color: var(--muted); }
 
 /* ---------- Type (Grail-style serif statements) ---------- */
-h1, .display { font-family: "Montserrat", system-ui, sans-serif; font-weight: 800; letter-spacing: -0.025em; line-height: 1.02; margin: 0 0 0.45em; }
+h1, .display { font-family: "Montserrat", system-ui, sans-serif; font-weight: 700; letter-spacing: -0.035em; line-height: 1.0; margin: 0 0 0.45em; }
 h1 { font-size: clamp(2rem, min(6.2vw, 9vh), 5rem); }
 h2.display { font-size: clamp(1.9rem, 4.2vw, 3.1rem); }
 h1 em, .display em { font-style: normal; color: var(--accent); }
@@ -57,9 +57,14 @@ main > .section, main > .stats, main > .cta-band, main > .logo-strip { max-width
 /* ---------- Buttons ---------- */
 .actions { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 2rem; }
 .actions.center { justify-content: center; }
-.btn { display: inline-block; padding: 0.9rem 1.6rem; border-radius: 999px; font-weight: 600; text-decoration: none; border: 1.5px solid transparent; transition: background 0.15s, border-color 0.15s, filter 0.15s; }
+.btn { display: inline-flex; align-items: center; gap: 0.65rem; padding: 0.7rem 1.4rem 0.7rem 0.7rem; border-radius: 999px; font-weight: 600; text-decoration: none; border: 1.5px solid transparent; transition: background 0.15s, border-color 0.15s, filter 0.15s; }
 .btn:hover { filter: brightness(1.08); }
 .btn.primary { background: var(--accent); color: var(--accent-ink); }
+.btn.primary::before, .btn.dark::before, .btn.light::before { content: "\2192"; display: inline-grid; place-items: center; width: 1.75rem; height: 1.75rem; border-radius: 50%; background: #111; color: var(--yellow); font-size: 0.95rem; font-weight: 700; flex: 0 0 auto; }
+.btn.dark { background: #141200; color: #fff; }
+.btn.dark::before { background: var(--yellow); color: #141200; }
+.btn.light::before { background: var(--red); color: #fff; }
+.btn.ghost { padding: 0.8rem 1.4rem; }
 .btn.primary:hover { background: #ffe14d; }
 .btn.ghost { border-color: rgba(255,255,255,0.3); color: var(--text); backdrop-filter: blur(6px); }
 .btn.ghost:hover { border-color: var(--text); }
@@ -78,7 +83,7 @@ main > .section, main > .stats, main > .cta-band, main > .logo-strip { max-width
 /* ---------- Stats (Jubilee-style, no boxes) ---------- */
 .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem 2.5rem; padding-top: 3.5rem; padding-bottom: 1.5rem; }
 .stat { border-left: 1px solid var(--border); padding-left: 1.25rem; }
-.stat strong { display: block; font-weight: 900; letter-spacing: -0.04em; line-height: 0.95; font-size: clamp(2.6rem, 5.5vw, 4.6rem); color: var(--accent); margin-bottom: 0.5rem; }
+.stat strong { display: block; font-weight: 700; letter-spacing: -0.04em; line-height: 0.95; font-size: clamp(2.6rem, 5.5vw, 4.6rem); color: var(--accent); margin-bottom: 0.5rem; }
 .stat span { display: block; color: var(--muted); font-size: 0.95rem; max-width: 16rem; }
 .stats.big { grid-template-columns: repeat(2, 1fr); gap: 3rem 4rem; padding: 0; }
 .stats.big .stat strong { font-size: clamp(3.4rem, 8vw, 7rem); }
@@ -122,7 +127,7 @@ main > .section, main > .stats, main > .cta-band, main > .logo-strip { max-width
 .channel .icon { width: 1.6rem; height: 1.6rem; color: var(--text); }
 .channel:hover .icon { color: var(--accent); }
 .foot-grid a .icon { display: inline-block; vertical-align: -0.3em; margin-right: 0.45rem; width: 1.1rem; height: 1.1rem; }
-.channel strong { font-family: "Montserrat", sans-serif; font-weight: 800; letter-spacing: -0.02em; font-size: 1.5rem; line-height: 1.1; }
+.channel strong { font-family: "Montserrat", sans-serif; font-weight: 700; letter-spacing: -0.02em; font-size: 1.5rem; line-height: 1.1; }
 .channel .meta { color: var(--muted); font-size: 0.9rem; }
 .channel .arrow { position: absolute; top: 1.4rem; right: 1.6rem; color: var(--accent); font-size: 1.2rem; }
 
@@ -139,7 +144,7 @@ main > .section, main > .stats, main > .cta-band, main > .logo-strip { max-width
 .checks li::before { content: "✓"; position: absolute; left: 0; color: #8fd68f; font-weight: 700; }
 .next-event { background: var(--red); color: #fff; border-radius: var(--radius); padding: 2rem; }
 .next-event .chip { background: rgba(255,255,255,0.18); color: #fff; }
-.next-event h3 { font-family: "Montserrat", sans-serif; font-weight: 800; letter-spacing: -0.02em; font-size: 2.2rem; line-height: 1; margin-bottom: 0.4rem; }
+.next-event h3 { font-family: "Montserrat", sans-serif; font-weight: 700; letter-spacing: -0.02em; font-size: 2.2rem; line-height: 1; margin-bottom: 0.4rem; }
 .next-event .date { font-weight: 600; margin-bottom: 0.5rem; }
 .next-event .where { color: rgba(255,255,255,0.85); font-size: 0.95rem; }
 .next-event .btn { margin-top: 0.5rem; }
@@ -154,8 +159,8 @@ main > .section, main > .stats, main > .cta-band, main > .logo-strip { max-width
 .member span { color: var(--muted); font-size: 0.9rem; }
 
 /* ---------- CTA band ---------- */
-.cta-band { margin-top: clamp(2rem, 6vw, 4rem); margin-bottom: clamp(2rem, 6vw, 4rem); padding-top: clamp(2.5rem, 6vw, 4.5rem); padding-bottom: clamp(2.5rem, 6vw, 4.5rem); background: var(--bg-2); border: 1px solid var(--border); border-radius: calc(var(--radius) + 8px); text-align: center; }
-.cta-band p { color: var(--text); font-size: 1.25rem; font-weight: 600; max-width: 34rem; margin: 0 auto 1.5rem; }
+.cta-band { margin-top: clamp(2rem, 6vw, 4rem); padding-top: clamp(2.5rem, 6vw, 4rem); padding-bottom: clamp(3rem, 7vw, 5rem); border-top: 1px solid var(--border); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.5rem 3rem; text-align: left; }
+.cta-band p { color: var(--text); font-size: clamp(1.3rem, 2.4vw, 1.9rem); font-weight: 700; letter-spacing: -0.02em; line-height: 1.2; max-width: 34rem; margin: 0; }
 
 /* ---------- Partnerships page ---------- */
 .logo-strip { padding-top: 2rem; padding-bottom: 1.5rem; }
@@ -243,7 +248,7 @@ footer { border-top: 1px solid var(--border); padding: 3rem var(--gutter) 2rem; 
 .chapter-card::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(to top, rgba(10,10,10,0.92) 30%, rgba(10,10,10,0.25) 70%, rgba(10,10,10,0.1)); }
 .chapter-card.soon::after { background: var(--surface); }
 .chapter-body { position: absolute; left: 0; right: 0; bottom: 0; padding: 1.75rem; }
-.chapter-body h2 { font-family: "Montserrat", sans-serif; font-weight: 800; letter-spacing: -0.02em; font-size: 1.7rem; line-height: 1.05; margin: 0 0 0.4rem; }
+.chapter-body h2 { font-family: "Montserrat", sans-serif; font-weight: 700; letter-spacing: -0.02em; font-size: 1.7rem; line-height: 1.05; margin: 0 0 0.4rem; }
 .chapter-body p { color: var(--muted); margin: 0 0 1rem; max-width: 30rem; }
 .chapter-body .go { color: var(--accent); font-weight: 600; }
 .chapter-card.soon .chip { color: var(--muted); background: rgba(255,255,255,0.08); }
@@ -267,7 +272,7 @@ footer { border-top: 1px solid var(--border); padding: 3rem var(--gutter) 2rem; 
 .about { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); background: var(--bg-2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); scroll-margin-top: 5rem; }
 .about-text { display: flex; flex-direction: column; justify-content: center; padding: clamp(3rem, 7vw, 6rem) var(--gutter); }
 .about-inner { width: 100%; max-width: calc(var(--max) / 2 - var(--gutter)); margin-left: auto; }
-.about h2 { font-family: "Montserrat", sans-serif; font-weight: 800; text-transform: uppercase; letter-spacing: -0.02em; line-height: 1; font-size: clamp(2.1rem, 4.4vw, 3.5rem); margin: 0 0 2rem; }
+.about h2 { font-family: "Montserrat", sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: -0.02em; line-height: 1; font-size: clamp(2.1rem, 4.4vw, 3.5rem); margin: 0 0 2rem; }
 .hand { font-family: "Permanent Marker", "Montserrat", cursive; font-weight: 400; text-transform: none; letter-spacing: 0; color: var(--accent); position: relative; display: inline-block; padding: 0 0.08em; }
 .hand svg { position: absolute; left: -3%; bottom: -0.3em; width: 106%; height: 0.45em; overflow: visible; }
 .about-letter p { color: var(--text); font-size: 1.02rem; line-height: 1.75; max-width: 34rem; }
@@ -313,3 +318,35 @@ footer { border-top: 1px solid var(--border); padding: 3rem var(--gutter) 2rem; 
 .group-photo { width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--border); }
 .mission-text { font-size: clamp(1.05rem, 1.6vw, 1.25rem); line-height: 1.65; color: var(--text); margin: 0; }
 @media (max-width: 760px) { .about-us { grid-template-columns: 1fr; } .brand span { font-size: 0.95rem; } }
+
+/* ---------- Yellow band (photo + short intro) ---------- */
+.band { background: var(--yellow); color: #141200; }
+.band-inner { max-width: var(--max); margin: 0 auto; padding: clamp(3rem, 6vw, 5rem) var(--gutter); display: grid; grid-template-columns: 1.15fr 1fr; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
+.band .label { color: rgba(20,18,0,0.6); }
+.band h2 { font-family: "Montserrat", sans-serif; font-weight: 700; letter-spacing: -0.035em; line-height: 1; font-size: clamp(2rem, 4.2vw, 3.4rem); margin: 0 0 1rem; color: #141200; }
+.band p { color: #141200; font-size: 1.05rem; line-height: 1.6; max-width: 30rem; margin: 0 0 1.5rem; }
+.band .mission-text { font-size: clamp(1.05rem, 1.6vw, 1.25rem); }
+.photo-annot { position: relative; margin: 0; }
+.photo-annot img { width: 100%; height: auto; border-radius: 10px; display: block; }
+.annot { position: absolute; font-family: "Permanent Marker", cursive; font-size: clamp(1.1rem, 2vw, 1.6rem); color: #fff; text-shadow: 0 1px 2px rgba(0,0,0,0.35); line-height: 1; }
+.annot svg { position: absolute; width: 4.5rem; height: 4.5rem; overflow: visible; }
+.annot.tl { top: 8%; left: 6%; }
+.annot.tl svg { top: 100%; left: 35%; }
+.annot.br { right: 7%; bottom: 10%; }
+.annot.br svg { bottom: 100%; right: 30%; transform: scaleY(-1); }
+/* ---------- Big staggered page index ---------- */
+.big-links { padding-top: clamp(3rem, 7vw, 5rem); padding-bottom: clamp(2rem, 5vw, 3rem); }
+.big-links a { display: flex; align-items: baseline; gap: 0.6em; width: fit-content; max-width: 100%; text-decoration: none; color: var(--yellow); font-family: "Montserrat", sans-serif; font-weight: 700; letter-spacing: -0.04em; line-height: 1; font-size: clamp(2.2rem, 6.2vw, 5.5rem); white-space: nowrap; padding: 0.14em 0; transition: color 0.15s; }
+.big-links a span { font-family: "Montserrat", sans-serif; font-weight: 500; font-size: 0.26em; letter-spacing: 0.08em; color: var(--muted); }
+.big-links a::after { content: "\2192"; font-size: 0.55em; color: var(--muted); opacity: 0; transform: translateX(-0.4em); transition: opacity 0.15s, transform 0.15s; }
+.big-links a:hover { color: var(--text); }
+.big-links a:hover::after { opacity: 1; transform: none; }
+.big-links a.mid { margin-left: 18%; }
+.big-links a.right { margin-left: 36%; }
+.big-links a.in { margin-left: 8%; }
+@media (max-width: 760px) {
+  .band-inner { grid-template-columns: 1fr; }
+  .big-links a.mid, .big-links a.right, .big-links a.in { margin-left: 0; }
+  .big-links a { white-space: normal; }
+  .cta-band { flex-direction: column; align-items: flex-start; }
+}

@@ -11,7 +11,7 @@
   <link rel="icon" href="assets/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Permanent+Marker&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=26">
+  <link rel="stylesheet" href="styles.css?v=27">
 </head>
 <body>
   <header class="nav">
@@ -54,21 +54,34 @@
       <a class="stats-link" href="partnerships.html">Full numbers for partners →</a>
     </section>
 
-    <!-- EXPLORE: entry cards to the rest of the site -->
-    <section class="section explore">
-      <p class="label">Explore</p>
-      <div class="chapters explore-grid">
-        <a class="chapter-card" href="clips.html"><img src="assets/top/ig-DWrjRB9ifT7.jpg" alt="" loading="lazy"><div class="chapter-body"><h2>Clips</h2><p>Our most-watched street interviews.</p><span class="go">Watch &rarr;</span></div></a>
-        <a class="chapter-card" href="events.html"><img src="assets/events/walk-n-talk-sep16.jpg" alt="" loading="lazy"><div class="chapter-body"><h2>Events</h2><p>Walk N&rsquo; Talk, weekly sessions and what&rsquo;s next.</p><span class="go">See events &rarr;</span></div></a>
-        <a class="chapter-card" href="about.html"><img src="assets/about/sizwe-session.jpg" alt="" loading="lazy"><div class="chapter-body"><h2>About us</h2><p>Who we are and how we got here.</p><span class="go">Meet the team &rarr;</span></div></a>
-        <a class="chapter-card" href="chapters/"><img src="assets/hero/wall-3.jpg" alt="" loading="lazy"><div class="chapter-body"><h2>University Chapters</h2><p>Howard, and the next campus.</p><span class="go">Find yours &rarr;</span></div></a>
+    <!-- INTRO BAND: yellow, photo + a short hello -->
+    <section class="band">
+      <div class="band-inner">
+        <figure class="photo-annot">
+          <img src="assets/about/sizwe-session.jpg" alt="Sizwe hosting a session in Founders Library at Howard" loading="lazy" width="1200" height="1800">
+          <span class="annot tl">Sizwe<svg viewBox="0 0 60 60" aria-hidden="true"><path d="M8 6c10 14 22 26 44 42M40 44l12 4-2-12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </figure>
+        <div>
+          <p class="label">Hey</p>
+          <h2>We&rsquo;re We Just Chattin.</h2>
+          <p>We stop strangers on Howard&rsquo;s Yard with a spatula for a mic, post what they say, and get the whole city arguing about it in person: sessions on campus, walks across the Mall, and a new chapter wherever the questions go next.</p>
+          <a class="btn dark" href="about.html">Get to know us</a>
+        </div>
       </div>
     </section>
+
+    <!-- PAGE INDEX: big staggered links -->
+    <nav class="section big-links" aria-label="Sections">
+      <a href="clips.html"><span>01</span>Clips</a>
+      <a href="events.html" class="mid"><span>02</span>Events</a>
+      <a href="about.html" class="right"><span>03</span>About us</a>
+      <a href="chapters/" class="in"><span>04</span>University Chapters</a>
+    </nav>
 
     <!-- PARTNER CTA -->
     <section class="cta-band">
       <p>Custom episodes, event sponsorships, product integrations. We&rsquo;ll find the fit.</p>
-      <a class="btn primary" href="partnerships.html">Partner with us →</a>
+      <a class="btn primary" href="partnerships.html">Partner with us</a>
     </section>
   </main>
 
