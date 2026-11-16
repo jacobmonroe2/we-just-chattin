@@ -350,3 +350,27 @@ footer { border-top: 1px solid var(--border); padding: 3rem var(--gutter) 2rem; 
   .big-links a { white-space: normal; }
   .cta-band { flex-direction: column; align-items: flex-start; }
 }
+
+/* ---------- Submit a prompt ---------- */
+.prompt { display: grid; grid-template-columns: 1fr 1.3fr; gap: clamp(2rem, 5vw, 4rem); align-items: start; padding-top: 2.5rem; }
+.prompt-side .checks { margin-bottom: 2rem; }
+.prompt-examples { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.chip-btn { font: inherit; font-size: 0.88rem; font-weight: 600; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: 999px; padding: 0.5rem 0.9rem; cursor: pointer; text-align: left; }
+.chip-btn:hover { border-color: var(--accent); color: var(--accent); }
+.prompt-form { display: flex; flex-direction: column; gap: 0.4rem; background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--radius); padding: clamp(1.25rem, 3vw, 2rem); }
+.prompt-form label { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-top: 0.9rem; }
+.prompt-form label span { font-weight: 500; letter-spacing: 0; text-transform: none; margin-left: 0.4rem; }
+.prompt-form label .req { color: var(--accent); }
+.prompt-form input[type="text"], .prompt-form textarea { font: inherit; font-size: 1rem; color: var(--text); background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 0.85rem 1rem; width: 100%; }
+.prompt-form textarea { font-size: 1.15rem; line-height: 1.5; resize: vertical; min-height: 7.5rem; }
+.prompt-form input:focus, .prompt-form textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(255,212,0,0.18); }
+.prompt-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0 1rem; }
+.prompt-check { display: flex !important; align-items: center; gap: 0.6rem; text-transform: none !important; letter-spacing: 0 !important; font-weight: 500 !important; font-size: 0.95rem !important; color: var(--text) !important; margin: 1.1rem 0 0.4rem; }
+.prompt-check input { width: 1.1rem; height: 1.1rem; accent-color: var(--accent); }
+.prompt-form .btn { align-self: flex-start; margin-top: 0.8rem; border: 0; cursor: pointer; font: inherit; font-weight: 600; }
+.prompt-form .btn[disabled] { opacity: 0.6; cursor: default; }
+.prompt-status { margin: 0.6rem 0 0; font-size: 0.95rem; color: var(--muted); min-height: 1.4em; }
+.prompt-status.ok { color: #8fd68f; }
+.prompt-status.err { color: #ff8a86; }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+@media (max-width: 760px) { .prompt { grid-template-columns: 1fr; } .prompt-row { grid-template-columns: 1fr; } }

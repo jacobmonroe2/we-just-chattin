@@ -61,3 +61,36 @@ document.querySelectorAll('.wall video').forEach((v, i) => {
   v.play().catch(() => {});
 });
 
+
+// Submit a prompt. Set PROMPT_ENDPOINT to a Formspree / Getform / Basin URL to collect submissions;
+// until then the form opens a prefilled email instead.
+const PROMPT_ENDPOINT = '';
+const PROMPT_EMAIL = 'hello@wejustchattin.com';
+const pform = document.getElementById('prompt-form');
+if (pform) {
+  const text = pform.querySelector('#p-text');
+  const status = pform.querySelector('.prompt-status');
+  const submit = pform.querySelector('button[type="submit"]');
+  document.querySelectorAll('.chip-btn').forEach(b => b.addEventListener('click', () => { text.value = b.textContent; text.focus(); }));
+  pform.addEventListener('submit', async e => {
+    e.preventDefault();
+    const data = Object.fromEntries(new FormData(pform).entries());
+    if (data._gotcha) return;
+    if (!data.prompt || data.prompt.trim().length < 8) { status.className = 'prompt-status err'; status.textContent = 'Give us the whole prompt first.'; text.focus(); return; }
+    status.className = 'prompt-status'; status.textContent = 'Sending…'; submit.disabled = true;
+    if (PROMPT_ENDPOINT) {
+      try {
+        const r = await fetch(PROMPT_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(data) });
+        if (!r.ok) throw new Error(r.status);
+        pform.reset(); status.className = 'prompt-status ok'; status.textContent = 'Got it. If it makes the cut you’ll see it on the Yard.';
+      } catch (err) {
+        status.className = 'prompt-status err'; status.textContent = 'That didn’t go through. Try again, or DM it to @wejchattin.';
+      }
+    } else {
+      const body = `Prompt: ${data.prompt}\n\nName: ${data.name || '-'}\nHandle: ${data.handle || '-'}\nSchool / city: ${data.school || '-'}\nCredit me: ${data.credit ? 'yes' : 'no'}`;
+      window.location.href = `mailto:${PROMPT_EMAIL}?subject=${encodeURIComponent('Prompt for We Just Chattin')}&body=${encodeURIComponent(body)}`;
+      status.className = 'prompt-status ok'; status.textContent = 'Your email app should open with the prompt filled in. If it doesn’t, DM it to @wejchattin.';
+    }
+    submit.disabled = false;
+  });
+}

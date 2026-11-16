@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Submit a prompt · We Just Chattin</title>
+  <meta name="description" content="Got a question for the Yard? Send We Just Chattin a prompt for the next street interview or session.">
+  <meta property="og:title" content="Submit a prompt · We Just Chattin">
+  <meta property="og:description" content="Got a question for the Yard? Send us a prompt.">
+  <meta property="og:image" content="assets/logo.png">
+  <link rel="icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=28">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="index.html"><img src="assets/logo.png" alt=""><span>We Just Chattin</span></a>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav>
+      <a href="clips.html">Clips</a>
+      <a href="events.html">Events</a>
+      <a href="about.html">About</a>
+      <a href="chapters/">University Chapters</a>
+      <a href="partnerships.html" class="nav-cta">Partner with us</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section page-head">
+      <p class="label">Submit a prompt</p>
+      <h1 class="display">Got a question for the <em>Yard?</em></h1>
+      <p class="section-lede">Send us a prompt. If it&rsquo;s good, we take it to the street or put it on the screen at the next session, and we&rsquo;ll credit you if you want.</p>
+    </section>
+
+    <section class="section prompt">
+      <div class="prompt-side">
+        <p class="label">What works</p>
+        <ul class="checks">
+          <li>One sentence. A question or a statement people will disagree on.</li>
+          <li>Specific beats broad. &ldquo;Should Black athletes go to HBCUs?&rdquo; over &ldquo;thoughts on sports?&rdquo;</li>
+          <li>Nothing that targets a specific person.</li>
+        </ul>
+        <p class="label">Tap one to start from it</p>
+        <div class="prompt-examples">
+          <button type="button" class="chip-btn">Can you be in love and still cheat?</button>
+          <button type="button" class="chip-btn">Howard is a Christian school.</button>
+          <button type="button" class="chip-btn">Would you cut your hair for a job?</button>
+          <button type="button" class="chip-btn">Is marriage outdated?</button>
+        </div>
+      </div>
+
+      <form id="prompt-form" class="prompt-form" novalidate>
+        <label for="p-text">Your prompt <span class="req">required</span></label>
+        <textarea id="p-text" name="prompt" rows="4" maxlength="240" required placeholder="Should Black parents put their kids in white schools?"></textarea>
+        <div class="prompt-row">
+          <div>
+            <label for="p-name">Name <span>optional</span></label>
+            <input id="p-name" name="name" type="text" autocomplete="name" placeholder="First name is fine">
+          </div>
+          <div>
+            <label for="p-handle">Instagram or TikTok <span>optional</span></label>
+            <input id="p-handle" name="handle" type="text" autocomplete="off" placeholder="@yourhandle">
+          </div>
+        </div>
+        <label for="p-school">School or city <span>optional</span></label>
+        <input id="p-school" name="school" type="text" placeholder="Howard, Morgan State, DC&hellip;">
+        <label class="prompt-check"><input type="checkbox" name="credit" value="yes" checked> Credit me if you use it</label>
+        <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn primary" type="submit">Send the prompt</button>
+        <p class="prompt-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="foot-grid">
+      <div>
+        <img class="foot-logo" src="assets/logo.png" alt="We Just Chattin">
+        <p class="muted">Building community through thought-provoking conversations.</p>
+      </div>
+      <div>
+        <p class="foot-h">Explore</p>
+        <a href="clips.html">Clips</a>
+        <a href="events.html">Events</a>
+        <a href="about.html">About us</a>
+        <a href="chapters/">University Chapters</a>
+        <a href="prompt.html" aria-current="page">Submit a prompt</a>
+      </div>
+      <div>
+        <p class="foot-h">Social</p>
+        <a href="https://www.tiktok.com/@wejchattin" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>TikTok ↗</a>
+        <a href="https://www.instagram.com/wejchattin/" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7.03.08C5.76.14 4.9.34 4.14.64c-.78.3-1.44.71-2.1 1.37C1.38 2.67.98 3.33.68 4.11.38 4.87.18 5.73.13 7c-.06 1.27-.07 1.68-.07 4.92 0 3.24.02 3.65.08 4.92.06 1.27.26 2.14.56 2.9.3.78.71 1.44 1.37 2.1.66.66 1.32 1.06 2.1 1.36.76.3 1.63.5 2.9.55 1.27.06 1.68.07 4.92.07s3.65-.02 4.92-.08c1.27-.06 2.14-.26 2.9-.56.78-.3 1.44-.71 2.1-1.37.66-.66 1.06-1.32 1.36-2.1.3-.76.5-1.63.55-2.9.06-1.27.07-1.68.07-4.92s-.02-3.65-.08-4.92c-.06-1.27-.26-2.14-.56-2.9-.3-.78-.71-1.44-1.37-2.1-.66-.66-1.32-1.06-2.1-1.36-.76-.3-1.63-.5-2.9-.55C15.65.01 15.24 0 12 0 8.76 0 8.35.02 7.03.08zm.15 21.65c-1.16-.05-1.8-.25-2.22-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.05-.41-2.22-.06-1.26-.07-1.63-.08-4.82 0-3.19 0-3.56.06-4.82.05-1.16.25-1.8.41-2.22.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.05-.36 2.22-.41 1.26-.06 1.63-.07 4.82-.08 3.19 0 3.56 0 4.82.06 1.16.05 1.8.25 2.22.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.05.41 2.22.06 1.26.07 1.63.08 4.82 0 3.19 0 3.56-.06 4.82-.05 1.16-.25 1.8-.41 2.22-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.05.36-2.22.41-1.26.06-1.63.07-4.82.08-3.19 0-3.56 0-4.82-.06zM16.95 5.6a1.44 1.44 0 1 0 2.88 0 1.44 1.44 0 0 0-2.88 0zM5.84 12.01a6.16 6.16 0 1 0 12.32-.02 6.16 6.16 0 0 0-12.32.02zM8 12a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/></svg>Instagram ↗</a>
+        <a href="https://www.youtube.com/@WejChattin" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 0 0 .5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>YouTube ↗</a>
+      </div>
+      <div>
+        <p class="foot-h">Work with us</p>
+        <a href="partnerships.html">Partnerships</a>
+        <a href="https://posh.vip/e/walk-n-talk-1" target="_blank" rel="noopener">Events on Posh ↗</a>
+      </div>
+    </div>
+    <p class="copy">&copy; <span id="year"></span> We Just Chattin &middot; Washington, DC</p>
+  </footer>
+
+  <script src="site.js?v=15"></script>
+</body>
+</html>
