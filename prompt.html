@@ -30,7 +30,7 @@
     <section class="section page-head">
       <p class="label">Submit a prompt</p>
       <h1 class="display">Got a question for the <em>Yard?</em></h1>
-      <p class="section-lede">Send us a prompt. If it&rsquo;s good, we take it to the street or put it on the screen at the next session, and we&rsquo;ll credit you if you want.</p>
+      <p class="section-lede">Send us a question. If it&rsquo;s good, we take it to the Yard or put it on the screen at the next session.</p>
     </section>
 
     <section class="section prompt">
@@ -51,23 +51,14 @@
       </div>
 
       <form id="prompt-form" class="prompt-form" novalidate>
-        <label for="p-text">Your prompt <span class="req">required</span></label>
-        <textarea id="p-text" name="prompt" rows="4" maxlength="240" required placeholder="Should Black parents put their kids in white schools?"></textarea>
-        <div class="prompt-row">
-          <div>
-            <label for="p-name">Name <span>optional</span></label>
-            <input id="p-name" name="name" type="text" autocomplete="name" placeholder="First name is fine">
-          </div>
-          <div>
-            <label for="p-handle">Instagram or TikTok <span>optional</span></label>
-            <input id="p-handle" name="handle" type="text" autocomplete="off" placeholder="@yourhandle">
-          </div>
-        </div>
-        <label for="p-school">School or city <span>optional</span></label>
-        <input id="p-school" name="school" type="text" placeholder="Howard, Morgan State, DC&hellip;">
-        <label class="prompt-check"><input type="checkbox" name="credit" value="yes" checked> Credit me if you use it</label>
+        <label for="p-text">Your question or prompt <span class="req">required</span></label>
+        <textarea id="p-text" name="prompt" rows="4" maxlength="500" required placeholder="Should Black parents put their kids in white schools?"></textarea>
+        <label for="p-name">Name <span>optional</span></label>
+        <input id="p-name" name="name" type="text" autocomplete="name" placeholder="First name, or your @handle if you want a shout-out">
+        <label for="p-ideas">Feedback or ideas for us <span>optional</span></label>
+        <textarea id="p-ideas" name="ideas" rows="2" maxlength="500" placeholder="A place we should film, a guest, a format&hellip;"></textarea>
         <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <button class="btn primary" type="submit">Send the prompt</button>
+        <button class="btn primary" type="submit">Send it</button>
         <p class="prompt-status" role="status" aria-live="polite"></p>
       </form>
     </section>
@@ -103,6 +94,6 @@
     <p class="copy">&copy; <span id="year"></span> We Just Chattin &middot; Washington, DC</p>
   </footer>
 
-  <script src="site.js?v=15"></script>
+  <script src="site.js?v=17"></script>
 </body>
 </html>

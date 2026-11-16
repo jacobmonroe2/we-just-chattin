@@ -9,7 +9,7 @@ Live: https://jacobmonroe2.github.io/we-just-chattin/
 
 - `clips.html` — most-watched TikToks and Reels with the lightbox player, plus channel links.
 - `events.html` — next event (Attend) and past-event proof cards + Season 2 session list.
-- `prompt.html` — submit-a-prompt form. Set `PROMPT_ENDPOINT` in `site.js` to a Formspree/Getform URL to collect entries; until then it opens a prefilled email to `PROMPT_EMAIL`.
+- `prompt.html` — submit-a-prompt form. Posts into the existing "Submit a Question to We Just Chattin" Google Form (forms.gle/vDZNpmKJJKwaNk2fA), so entries land wherever that form's responses go. Field IDs live in `GFORM` in `site.js`; if the form's questions change, re-read them from the form's viewform page.
 - `about.html` — group photo + mission paragraph (placeholder until the team sends it), founder letter, team.
 - `index.html` — video-wall hero with the mission, stats, most-watched reel (TikTok and Instagram embeds of the top videos by views, ids hard-coded in the HTML), channels, next event, team, partner CTA
 - `chapters/index.html` — Chapters index (one card per university; "Your campus" card for new chapters)
