@@ -35,7 +35,7 @@ Pulled from public pages on Nov 15, 2026. Update them as they grow.
 | TikTok views | 11.5M across 132 videos | tiktok.com/@wejchattin |
 | TikTok followers / likes | 10.1K / 1.4M | tiktok.com/@wejchattin |
 | Instagram followers / posts | 10K / 198 | instagram.com/wejchattin |
-| Instagram reel views | ~860K across 24 reels | instagram.com/wejchattin/reels (logged in) |
+| Instagram reel views | 15.3M across 187 reels (top reel 4.8M, 17 past 100K) | WJC Instagram Reels Tracker (Google Sheet) |
 | YouTube | 92 subscribers, 100 shorts | youtube.com/@WejChattin |
 | Events | 9 hosted on Posh | posh.vip/e/walk-n-talk-1 |
 
