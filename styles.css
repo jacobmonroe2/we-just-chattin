@@ -17,15 +17,6 @@
 }
 
 * { box-sizing: border-box; }
-/* Spatula cursor (tilted). On macOS 26 + Chrome the system arrow comes back when the pointer rests. */
-@media (hover: hover) and (pointer: fine) {
-  html {
-    cursor: url("assets/cursor-32.png") 1 5, auto;
-    cursor: url("assets/cursor.svg") 1 5, auto;
-  }
-  *, *::before, *::after { cursor: inherit; }
-  iframe { cursor: auto; }
-}
 html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--bg); color: var(--text); font-family: "Montserrat", system-ui, -apple-system, sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; }
 img, video { max-width: 100%; display: block; }

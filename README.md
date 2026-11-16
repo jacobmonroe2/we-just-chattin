@@ -15,7 +15,6 @@ Live: https://jacobmonroe2.github.io/we-just-chattin/
 
 ## Assets
 
-- `assets/cursor.svg` / `cursor-32.png` — the tilted spatula cursor (SVG wraps a 128px PNG so it stays crisp on retina)
 - `assets/logo.png` — WJC logo (transparent)
 - `assets/hero/wall-1..5.mp4` + `.jpg` — hero video wall. Each column is twelve 4-second answer segments (host and whip-pan trimmed off) from the 60 Instagram cuts, 432x768, no audio.
   Re-encode new clips the same way:
