@@ -7,6 +7,9 @@ Live: https://jacobmonroe2.github.io/we-just-chattin/
 
 ## Pages
 
+- `clips.html` — most-watched TikToks and Reels with the lightbox player, plus channel links.
+- `events.html` — next event (Attend) and past-event proof cards + Season 2 session list.
+- `about.html` — group photo + mission paragraph (placeholder until the team sends it), founder letter, team.
 - `index.html` — video-wall hero with the mission, stats, most-watched reel (TikTok and Instagram embeds of the top videos by views, ids hard-coded in the HTML), channels, next event, team, partner CTA
 - `chapters/index.html` — Chapters index (one card per university; "Your campus" card for new chapters)
 - `chapters/howard.html` — Howard University chapter page (intro, team, events). Copy it for a new school.
