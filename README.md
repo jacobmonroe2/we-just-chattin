@@ -8,6 +8,8 @@ Live: https://jacobmonroe2.github.io/we-just-chattin/
 ## Pages
 
 - `index.html` — video-wall hero with the mission, stats, most-watched reel (TikTok and Instagram embeds of the top videos by views, ids hard-coded in the HTML), channels, next event, team, partner CTA
+- `chapters/index.html` — Chapters index (one card per university; "Your campus" card for new chapters)
+- `chapters/howard.html` — Howard University chapter page (intro, team, events). Copy it for a new school.
 - `partnerships.html` — metrics, audience, offerings, past work, contact
 - `styles.css` · `site.js` (mobile menu, lazy clip playback, tap-for-sound)
 

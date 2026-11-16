@@ -241,3 +241,32 @@ footer { border-top: 1px solid var(--border); padding: 3rem var(--gutter) 2rem; 
   .wall video { display: none; }
   .hero { background: var(--bg-2); }
 }
+
+/* ---------- Chapters ---------- */
+.chapters { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+.chapter-card { position: relative; display: block; min-height: 380px; border-radius: var(--radius); overflow: hidden; background: var(--surface); border: 1px solid var(--border); text-decoration: none; color: var(--text); isolation: isolate; transition: border-color 0.15s; }
+.chapter-card:hover { border-color: var(--accent); }
+.chapter-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; filter: saturate(0.85); transition: transform 0.4s; }
+.chapter-card:hover img { transform: scale(1.03); }
+.chapter-card::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(to top, rgba(10,10,10,0.92) 30%, rgba(10,10,10,0.25) 70%, rgba(10,10,10,0.1)); }
+.chapter-card.soon::after { background: var(--surface); }
+.chapter-body { position: absolute; left: 0; right: 0; bottom: 0; padding: 1.75rem; }
+.chapter-body h2 { font-family: "Montserrat", sans-serif; font-weight: 800; letter-spacing: -0.02em; font-size: 1.7rem; line-height: 1.05; margin: 0 0 0.4rem; }
+.chapter-body p { color: var(--muted); margin: 0 0 1rem; max-width: 30rem; }
+.chapter-body .go { color: var(--accent); font-weight: 600; }
+.chapter-card.soon .chip { color: var(--muted); background: rgba(255,255,255,0.08); }
+.crumb { font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(244,241,234,0.7); margin: 0 0 1rem; }
+.crumb a { color: var(--accent); text-decoration: none; }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+.two-col p { margin: 0; color: var(--text); }
+.stats.compact { padding: 2.5rem 0 0; grid-template-columns: repeat(3, 1fr); }
+.stats.compact .stat { min-width: 0; }
+.stats.compact .stat strong { font-size: clamp(2.4rem, 5vw, 4rem); overflow-wrap: anywhere; }
+.checks li strong { color: var(--text); }
+.small { font-size: 0.9rem; margin-top: 1.25rem; }
+.small a { color: var(--accent); }
+@media (max-width: 760px) {
+  .two-col { grid-template-columns: 1fr; gap: 1rem; }
+  .stats.compact { grid-template-columns: 1fr 1fr; }
+  .chapter-card { min-height: 320px; }
+}
