@@ -28,6 +28,7 @@ Live: https://jacobmonroe2.github.io/we-just-chattin/
 - `assets/events/` — Walk N' Talk promo video + poster
 - `assets/events/wnt-sep16/` — Sep 16, 2026 Walk N' Talk recap: flyer + nine photos (long edge 1600px). Past events live in `index.html` under `<!-- PAST EVENTS -->`; add a recap by copying an `<article class="recap">` and dropping photos into `.shots`.
 - `assets/events/session-6/` — Season 2, Session 6 recap photos (Douglass Hall). Instagram recap: instagram.com/p/DeSd5aACVND
+- `assets/events/session-4/cover.jpg` — Session 4 recap cover (from the Instagram recap post instagram.com/p/Dd2MfcsCVTS). Season 2 schedule (Sessions 4–10) is a plain list at the end of the Past events section; dates/rooms come from the Posh listings.
 
 ## Numbers on the site
 
