@@ -11,7 +11,7 @@
   <link rel="icon" href="assets/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Permanent+Marker&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=22">
+  <link rel="stylesheet" href="styles.css?v=23">
 </head>
 <body>
   <header class="nav">
@@ -163,6 +163,13 @@
       <div class="player-frame"><iframe title="Video" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
       <a class="player-link" href="#" target="_blank" rel="noopener">Open on TikTok ↗</a>
     </dialog>
+    <dialog id="viewer" class="viewer" aria-label="Photo viewer">
+      <button class="viewer-close" type="button" aria-label="Close">✕</button>
+      <button class="viewer-prev" type="button" aria-label="Previous photo">‹</button>
+      <img alt="">
+      <button class="viewer-next" type="button" aria-label="Next photo">›</button>
+      <p class="viewer-cap"></p>
+    </dialog>
 
     <!-- CHANNELS -->
     <section class="section">
@@ -216,6 +223,7 @@
           <li>Paired, thought-provoking conversations.</li>
           <li>New events most months. Follow Instagram for dates.</li>
         </ul>
+        <p class="small"><a href="#past">See what the last one looked like &darr;</a></p>
       </div>
       <div class="attend-media">
         <figure class="walk-video">
@@ -230,6 +238,48 @@
         <a class="btn light" href="https://posh.vip/e/walk-n-talk-1" target="_blank" rel="noopener">RSVP free on Posh ↗</a>
       </aside>
       </div>
+    </section>
+
+    <!-- PAST EVENTS: recaps with photo grids -->
+    <section id="past" class="section past">
+      <p class="label">Past events <span>&middot; what you missed</span></p>
+
+      <article class="recap">
+        <div class="recap-head">
+          <img class="flyer" src="assets/events/wnt-sep16/flyer.jpg" alt="Walk N’ Talk flyer: aerial view of the National Mall, September 16th, 6 PM" loading="lazy" width="1091" height="1343">
+          <div class="recap-copy">
+            <span class="chip">Walk N&rsquo; Talk &middot; Sep 16, 2026</span>
+            <h2 class="display">300 strangers walked the Mall and left as friends.</h2>
+            <p class="recap-meta">National Mall, Washington, DC &middot; Washington Monument to the Capitol &middot; with State of the Party</p>
+            <p>Everyone got a name tag and a stranger. Sizwe called the questions through a megaphone, and the pairs talked their way from the Monument to the Capitol steps at sunset. Over 300 people came out.</p>
+            <a class="btn primary" href="#attend">Catch the next one</a>
+          </div>
+        </div>
+        <div class="shots" aria-label="Walk N’ Talk photos">
+          <button class="shot" type="button"><img src="assets/events/wnt-sep16/01-group-capitol.jpg" alt="The whole Walk N’ Talk crowd on the Capitol steps at sunset" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/events/wnt-sep16/02-walking-to-capitol.jpg" alt="Walkers arriving at the Capitol as the sun goes down" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/events/wnt-sep16/06-sizwe-megaphone.jpg" alt="Sizwe reading the next question through a megaphone" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/events/wnt-sep16/07-pair-museum.jpg" alt="A pair mid-conversation on the gravel path by the museums" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/events/wnt-sep16/04-sunset-path.jpg" alt="Pairs walking into the sunset along the Mall" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/events/wnt-sep16/09-sizwe-mall.jpg" alt="Sizwe leading the group down the Mall, megaphone in hand" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/events/wnt-sep16/03-megaphone-capitol.jpg" alt="Heading toward the Capitol with the megaphone and a question card" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/events/wnt-sep16/08-group-lawn.jpg" alt="A group of walkers talking on the path by the lawn" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/events/wnt-sep16/05-crowd-monument.jpg" alt="The crowd gathering near the Washington Monument before the walk" loading="lazy"></button>
+        </div>
+      </article>
+
+      <article class="recap">
+        <div class="recap-head">
+          <img class="flyer photo" src="assets/about/sizwe-session.jpg" alt="Sizwe hosting a Season 2 session in a Howard University library" loading="lazy" width="1200" height="1800">
+          <div class="recap-copy">
+            <span class="chip">Sessions &middot; Season 2</span>
+            <h2 class="display">Season 2 Sessions.</h2>
+            <p class="recap-meta">Douglass Hall, Howard University &middot; on the road at Morgan State (Oct 2) and Spelhouse (Oct 7)</p>
+            <p>The sit-down version of the clips. A question goes up on the screen, the room splits, and strangers argue it out until time is up. Season 2 ran in Douglass Hall and took the format to Morgan State and Spelhouse this October.</p>
+            <a class="btn ghost" href="https://www.instagram.com/wejchattin/" target="_blank" rel="noopener">Session dates on Instagram &#8599;</a>
+          </div>
+        </div>
+      </article>
     </section>
 
     <!-- TEAM -->
@@ -271,6 +321,6 @@
     <p class="copy">&copy; <span id="year"></span> We Just Chattin &middot; Washington, DC</p>
   </footer>
 
-  <script src="site.js?v=12"></script>
+  <script src="site.js?v=13"></script>
 </body>
 </html>

@@ -26,6 +26,7 @@ Live: https://jacobmonroe2.github.io/we-just-chattin/
 - `assets/team/` — team baby photos, 800x800 jpg
 - `assets/partners/` — grey sponsor logos and sponsored videos (Buttah Skin, Capital City Mambo Sauce)
 - `assets/events/` — Walk N' Talk promo video + poster
+- `assets/events/wnt-sep16/` — Sep 16, 2026 Walk N' Talk recap: flyer + nine photos (long edge 1600px). Past events live in `index.html` under `<!-- PAST EVENTS -->`; add a recap by copying an `<article class="recap">` and dropping photos into `.shots`.
 
 ## Numbers on the site
 
